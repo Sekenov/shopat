@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Основной контейнер */
+.main-page {
+    max-width: 375px;
+    min-height: 100vh;
+    margin: auto;
+    background: #F8F9FA;
+    padding: 30px 20px; 
+}
+
+/* Header */
+header {
+    margin: 0; 
+}
+
+/* Обертка для header */
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Стили для headbut и headcor */
+.headbut, .headcor {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 40px;
+    background: #FFF;
+}
+
+/* Стили для круга в headbut */
+.headbut {
+    padding: 15px;
+    gap: 14px;
+}
+
+.circle {
+    background-image: url('/src/img/apps-circle.svg');
+    background-size: cover;
+    background-position: center;
+    width: 15px;
+    height: 14px;
+}
+
+/* Стили для корзины в headcor */
+.corzin {
+    background-image: url('/src/img/Frame.png');
+    background-size: cover;
+    background-position: center;
+    width: 24px;
+    height: 24px;
+}
+
+/* Стили для формы поиска */
+.form {
+    width: 206px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 0.8em;
+    border-radius: 20px;
+    background: #fff;
+}
+
+/* Убираем стандартный стиль кнопки */
+.form button {
+    border: none;
+    background: none;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-image: url('/src/img/Vector.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 0.8em; 
+    padding: 0;
+}
+
+/* Стили для инпута */
+.input {
+    font-size: 1rem;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+}
+
+
+.form button:focus, .form button:active {
+    outline: none;
+}
+
+/* Конец header */
+
+
+/* main start */
+
+.brands-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px; 
+  }
+  
+  .brand {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-radius: 40px;
+    background: #FFF;
+  } 
+
+  .nike {
+    background-image: url('/src/img/brend/nike.svg');
+
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+  }
+  
+  .puma {
+    background-image: url('/src/img/brend/puma.svg');
+
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    
+  }
+  
+  .under-armour {
+    background-image: url('/src/img/brend/ander.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+  }
+  
+  .adidas {
+    background-image: url('/src/img/brend/adidas.svg');
+
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+  }
+  
+  .converse {
+    background-image: url('/src/img/brend/convers.svg');
+
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+  }
+  
+/* main end */
+
+
+/* section popular start */
+.Popular {
+  margin-top: 30px;
+}
+
+.PopularText {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.PopularText h1 {
+  color: #1A2530;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.PopularText p {
+  color: #5B9EE1;
+  text-align: right;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  cursor: pointer;
+}
+
+
+.wrapcart {
+  padding-top: 15px;
+  display: flex;
+  align-items: flex-start;
+  gap: 21px;
+  justify-content: space-evenly;
+}
+
+.Popular_card {
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 0px 0px 12px;
+  border-radius: 16px;
+  background:#FFF;
+}
+
+
+.Popular_image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.Popular_text span {
+  color:#5B9EE1;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.Popular_text h2 {
+  color: #1A2530;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.buy {
+  padding-top: 12px;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.buy p {
+  color:#1A2530;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+
+.add-to-cart {
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  width: 34px;
+  height: 35.5px;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 30px;
+  cursor: pointer;
+  bottom: 10px;
+  right: 10px;
+  flex-shrink: 0;
+  
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+/* section populr end */
+
+
+/* section new start */
+
+.New {
+  margin-top: 30px;
+
+}
+
+
+.NewText {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.NewText h1 {
+  color: #1A2530;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.NewText p {
+  color: #5B9EE1;
+  text-align: right;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  cursor: pointer;
+}
+
+.New_card {
+  display: flex;
+  width: 335px;
+  margin-top: 15px;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 16px;
+  background: #FFF;
+}
+
+
+.Best_text span{
+  color: #5B9EE1;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; 
+  letter-spacing: 0.96px;
+  text-transform: uppercase;
+}
+
+.Best_text h2{
+  color: #1A2530;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  padding:4px 0 10px 0 ;
+}
+
+.Best_text p {
+  color: #1A2530;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+
+.New_image {
+  width: 114px;
+  height: 60px;
+
+}
+
+.New_image img{
+  width: 100%;
+  border-radius: 8px;
+}
+/* section new end */
