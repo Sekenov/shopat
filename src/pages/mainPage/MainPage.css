@@ -319,7 +319,7 @@ header {
 
 .New_card {
   display: flex;
-  width: 335px;
+  max-width: 335px;
   margin-top: 15px;
   padding: 20px;
   justify-content: space-between;
@@ -370,4 +370,12 @@ header {
   width: 100%;
   border-radius: 8px;
 }
+
+
+
+/*  */
+
+
+
+/*  */
 /* section new end */

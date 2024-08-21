@@ -4,6 +4,9 @@ import './MainPage.css';
 import frameImage from '../../img/cross/crosovki.png'; 
 
 function MainPage() {
+
+
+
   return (
     <div className="main-page">
       <header>
@@ -92,6 +95,27 @@ function MainPage() {
         </div>
 
       </section>
+
+      <section className='New'>
+        <div className='NewText'>
+          <h1>New Arrivals</h1>
+          <p>See all</p>
+        </div>
+
+        <div className="New_card">
+            <div className="Best_text">
+              <span>Best Choice</span>
+              <h2>Nike Air Jordan</h2>
+              <p>$849.69</p>
+            </div>
+
+            <div className="New_image">
+              <img src={frameImage} alt="Product" />
+            </div>
+        </div>
+
+      </section>
+
 
     </div>
   );
