@@ -7,7 +7,7 @@
     font-family: "Montserrat", sans-serif;
   }
 .mainBlockCart {
-    width: 100%;
+    width: 375px;
     max-width: 375px; /* Максимальная ширина для мобильных устройств */
     height: 100vh; /* Высота блока равна 100% высоты видимого экрана */
     background: #f8f9fa;
