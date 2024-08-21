@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Adamina&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+  }
+.mainBlockCart {
+    width: 100%;
+    max-width: 375px; /* Максимальная ширина для мобильных устройств */
+    height: 100vh; /* Высота блока равна 100% высоты видимого экрана */
+    background: #f8f9fa;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .mainBlockCart .cart{
+    margin-top: 60px; /* Отступ сверху, чтобы не перекрывать фиксированный заголовок */
+    margin-bottom: 190px; /* Отступ снизу, чтобы не перекрывать фиксированный футер */
+    flex-grow: 1; /* Занимает оставшееся пространство */
+    overflow-y: auto; /* Включаем вертикальную прокрутку */
+    padding-right: 10px; /* Добавляем отступ для скроллбара */
+    -ms-overflow-style: none;  /* Убираем скроллбар для IE и Edge */
+    scrollbar-width: none;  
+
+}
+ .header-cart{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #f8f9fa;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+
+}
+ .header-cart .but2{
+    color: #1A2530;
+    font-size: 16px;
+}
+/*  */
+
+
+.mainBlockCart .cart .cart-order{
+    /* margin-top: 70px; */
+    display: flex;
+    align-items: center;
+    gap: 85px;
+    margin-bottom: 20px;
+}
+.mainBlockCart .cart .cart-order .img-order{
+    width: 87px;height: 85px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    overflow: hidden; /* Скрываем содержимое, которое выходит за пределы блока */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainBlockCart .cart .cart-order .img-order img{
+width: 100%; /* Изображение занимает всю ширину box */
+  height: 100%; /* Изображение занимает всю высоту box */
+  object-fit: cover;
+}
+.mainBlockCart .cart .cart-order .cart-gap{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+.mainBlockCart .cart .cart-order .about-order{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.mainBlockCart .cart .cart-order .about-order .name-about{
+    font-size: 16px;
+    color: #1A2530;
+}
+.mainBlockCart .cart .cart-order .about-order .price-about{
+    color: #1A2530;
+    font-size: 14px;
+    font-weight: 500;
+}
+.mainBlockCart .cart .cart-order .about-order .gap-order{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.mainBlockCart .cart .cart-order .about-order .amount-order{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+.mainBlockCart .cart .cart-order .about-order .amount-order .minus-amount{
+    width: 24px;height: 24px;
+    background-color: #fff;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #828A89;
+}
+.mainBlockCart .cart .cart-order .about-order .amount-order .plus-amount{
+    width: 24px;height: 24px;
+    background-color: #5B9EE1;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.mainBlockCart .cart .cart-order .action-order{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+.mainBlockCart .cart .cart-order .action-order .delete-action{
+    width: 25px;height: 25px;
+    overflow: hidden; /* Скрываем содержимое, которое выходит за пределы блока */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainBlockCart .cart .cart-order .action-order .delete-action img{
+    width: 100%; /* Изображение занимает всю ширину box */
+  height: 100%; /* Изображение занимает всю высоту box */
+  object-fit: cover;
+}
+/*  */
+
+.check-order{
+    position: fixed;
+    bottom: 0;
+    border-top-right-radius: 24px;
+    border-top-left-radius: 24px;
+    background-color: #fff;
+    width: 375px;
+
+}
+.check-order .padding-order{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.check-order .padding-order .price-order{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.check-order .padding-order .sale-order{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.check-order .padding-order .price-order .name-price{
+    color: #707B81;
+    font-size: 16px;
+}
+.check-order .padding-order .price-order .price-price{
+    color: #1A2530;
+    font-size: 18px;
+}
+.check-order .padding-order .sale-order .sale-name{
+    color: #707B81;
+    font-size: 16px;
+}
+.check-order .padding-order .sale-order .sale-price{
+    color: #1A2530;
+    font-size: 18px;
+}
+/*  */
+.line-line{
+    padding: 0 20px;
+}
+.line-line .line{
+    border-top: 1px dashed #CCCCCC; /* можно настроить толщину линии и цвет */
+    width: 100%; /* установить ширину линии */
+    /* margin: 20px 0; */
+}
+/*  */
+.check-order .padding-order .total-cost{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.check-order .padding-order .total-cost .cost-name{
+    font-size: 16px;
+    color: #1A2530;
+    font-weight: 500;
+}
+.check-order .padding-order .total-cost .cost-price{
+    color: #1A2530;
+    font-size: 20px;
+    font-weight: 500;
+}
+.check-order .checkout-button{
+    padding: 0 20px;
+    
+}
+.check-order .checkout-button .button-submit{
+    width: 335px;
+    padding: 16px 126px;
+    border-radius: 50px;
+    border: none;
+    background-color: #5B9EE1;
+    color: white;
+}   
