@@ -1,10 +1,12 @@
+import BestSeller from "./pages/bestseller/BestSeller";
 import Favorit from "./pages/favourite/Favorit";
 
 
 function App() {
   return (
     <div className="App">
-      <Favorit />
+      <BestSeller />
+      {/* <Favorit /> */}
       {/* <MainPage />  */}
     </div>
   );
