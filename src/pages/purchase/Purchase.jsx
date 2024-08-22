@@ -6,13 +6,20 @@ import changeButton from "./img/changeButton.svg";
 import phone from "./img/phone.svg";
 import choose from "./img/choose.svg";
 import karta from "./img/map.svg";
-import paypal from './img/paypal.svg'
+import paypal from "./img/paypal.svg";
+import { useNavigate } from "react-router-dom";
 export default function Purchase() {
+
+  const navigate = useNavigate();
+
+  const handleBackClick = () => {
+    navigate(-1); 
+  };
   return (
     <>
       <div className="mainBlockPurchase">
         <div className="header-purchase">
-          <div className="but1">
+          <div className="but1" onClick={handleBackClick}>
             <img src={backButton} alt="" />
           </div>
           <div className="but2">My Cart</div>
@@ -81,9 +88,7 @@ export default function Purchase() {
             <p className="paymant-name">Payment Method</p>
 
             <div className="paymant-choose">
-
               <div className="gap">
-
                 <div className="block-pay">
                   <img src={paypal} alt="" />
                 </div>
@@ -92,21 +97,16 @@ export default function Purchase() {
                   <p className="name-pay">PayPal</p>
                   <p className="num-pay">785489</p>
                 </div>
-
               </div>
 
               <div className="chooseBlock">
                 <img src={choose} alt="" />
               </div>
-
             </div>
-
-
           </div>
         </div>
-
-        
-      </div><div className="check-order-purchase">
+      </div>
+      <div className="check-order-purchase">
         <div className="padding-order">
           <div className="price-order">
             <p className="name-price">Subtotal</p>
@@ -128,9 +128,7 @@ export default function Purchase() {
         </div>
 
         <div className="checkout-button">
-            <button className="button-submit">
-                Checkout
-            </button>
+          <button className="button-submit">Checkout</button>
         </div>
       </div>
     </>

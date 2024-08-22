@@ -6,7 +6,13 @@ import nike from './img/nike.png'
 import nike1 from './img/nikeGallery.png'
 import nike2 from './img/nikeGallery2.png'
 import nike3 from './img/nikeGallery3.png'
+import { useNavigate } from 'react-router-dom'
 export default function Detail() {
+    const navigate = useNavigate();
+
+    const AddToCart = () => {
+      navigate('/cart');
+    };
   return (
     <>
     <div className='mainBlock'>
@@ -56,7 +62,7 @@ export default function Detail() {
                     <p className="price-text">Price</p>
                     <p className='price-amount'>$ 25000</p>
                 </div>
-                <button className="accept-button">Add To Cart</button>
+                <button className="accept-button" onClick={AddToCart}>Add To Cart</button>
             </div>
         </div>
     </div>

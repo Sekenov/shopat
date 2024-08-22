@@ -5,10 +5,23 @@ import trash from "./img/delete.png";
 import minus from "./img/minus.png";
 import plus from "./img/plus.png";
 import nikeCart from "./img/nike-cart.png";
+import { useNavigate } from "react-router-dom";
 export default function Cart() {
+  const navigate = useNavigate();
+  // при нажатия на страницу покупки, кнопка заплатить
+  const handleCheckout = () => {
+    navigate('/purchase');
+  };
+
+
+
+  // кнопка назад
+  const handleBackClick = () => {
+    navigate(-1); 
+  };
   return (
     <><div className="header-cart">
-          <div className="but1">
+          <div className="but1" onClick={handleBackClick}>
             <img src={backButton} alt="" />
           </div>
           <div className="but2">My Cart</div>
@@ -224,7 +237,7 @@ export default function Cart() {
         </div>
 
         <div className="checkout-button">
-            <button className="button-submit">
+            <button onClick={handleCheckout} className="button-submit">
                 Checkout
             </button>
         </div>

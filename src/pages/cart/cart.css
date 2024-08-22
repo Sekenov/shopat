@@ -214,4 +214,7 @@ width: 100%; /* Изображение занимает всю ширину box 
     border: none;
     background-color: #5B9EE1;
     color: white;
-}   
+}  
+.check-order .checkout-button .button-submit Link{
+    color: white;
+}
