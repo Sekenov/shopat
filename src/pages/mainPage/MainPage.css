@@ -173,6 +173,7 @@ header {
 /* section popular start */
 .Popular {
   margin-top: 30px;
+
 }
 
 .PopularText {
@@ -370,6 +371,7 @@ header {
   width: 100%;
   border-radius: 8px;
 }
+
 /* section new end */
 .blockFooter{
   position: fixed;
@@ -385,3 +387,4 @@ header {
   align-items: center;
   justify-content: space-around;
 }
+

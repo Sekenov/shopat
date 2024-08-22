@@ -7,7 +7,9 @@ import profile from './img/profile.svg'
 import like from './img/like.svg'
 import home from './img/home.svg'
 function MainPage() {
+
   return (<>
+
     <div className="main-page">
       <header>
         <div className='wrapper'>
@@ -97,6 +99,26 @@ function MainPage() {
       </section>
       
 
+      <section className='New'>
+        <div className='NewText'>
+          <h1>New Arrivals</h1>
+          <p>See all</p>
+        </div>
+
+        <div className="New_card">
+            <div className="Best_text">
+              <span>Best Choice</span>
+              <h2>Nike Air Jordan</h2>
+              <p>$849.69</p>
+            </div>
+
+            <div className="New_image">
+              <img src={frameImage} alt="Product" />
+            </div>
+        </div>
+
+      </section>
+    </div>
     </div><div className="blockFooter">
             <div className="footer">
                 <div className="but1"><Link ><img src={like} alt="" /></Link></div>
@@ -104,6 +126,7 @@ function MainPage() {
                 <div className="but1"><Link to={'/profile'}><img src={profile} alt="" /></Link></div>
             </div>
       </div></>
+
   );
 }
 
