@@ -5,6 +5,7 @@ import Detail from './pages/details/Detail';
 import MainPage from './pages/mainPage/MainPage';
 import Purchase from './pages/purchase/Purchase';
 import Profile from './pages/profile/Profile';
+import Favorit from './pages/favourite/Favorit';
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
           <Route path="/details" element={<Detail />} />
           <Route path="/purchase" element={<Purchase />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/favorit" element={<Favorit />} />
+
         </Routes>
         
       </div>
