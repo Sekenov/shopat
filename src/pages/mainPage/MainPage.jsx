@@ -2,12 +2,14 @@
 import React from 'react';
 import './MainPage.css';
 import frameImage from '../../img/cross/crosovki.png'; 
-
+import { Link } from 'react-router-dom';
+import profile from './img/profile.svg'
+import like from './img/like.svg'
+import home from './img/home.svg'
 function MainPage() {
 
+  return (<>
 
-
-  return (
     <div className="main-page">
       <header>
         <div className='wrapper'>
@@ -21,9 +23,9 @@ function MainPage() {
             </form>
 
 
-            <div className='headcor'>
+            <Link to={'/cart'} className='headcor'>
               <span className='corzin'></span>
-            </div>
+            </Link>
         </div>
       </header>
 
@@ -95,6 +97,7 @@ function MainPage() {
         </div>
 
       </section>
+      
 
       <section className='New'>
         <div className='NewText'>
@@ -116,6 +119,14 @@ function MainPage() {
 
       </section>
     </div>
+    </div><div className="blockFooter">
+            <div className="footer">
+                <div className="but1"><Link ><img src={like} alt="" /></Link></div>
+                <div className="but1"><Link to={'/'}><img src={home} alt="" /></Link></div>
+                <div className="but1"><Link to={'/profile'}><img src={profile} alt="" /></Link></div>
+            </div>
+      </div></>
+
   );
 }
 

@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Adamina&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+.mainBlock {
+  width: 375px;
+  background: #f8f9fa;
+  /* font-family: 'Adamina'; */
+}
+.header-details {
+  padding: 52px 20px 0 20px;
+  display: flex;
+  /* padding-top: 52px; */
+  align-items: center;
+  justify-content: center;
+  gap: 78px;
+}
+.header-details .but1 {
+  background: #ffffff;
+  padding: 10px;
+  text-align: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 40px;
+}
+.header-details .but1 img {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+}
+.header-details .but2 {
+  font-size: 14px;
+}
+.header-details .but3 {
+  background: #ffffff;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  border-radius: 40px;
+}
+.header-details .but3 img {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+}
+
+/*  */
+
+.photo-details {
+  display: flex;
+  justify-content: center;
+  padding: 16px 32px 0px 32px;
+}
+
+/*  */
+
+.detail-details {
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  background-color: #ffffff;
+  padding: 20px;
+}
+.detail-details .text-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.detail-details .text-details .bestSeller {
+  color: #5b9ee1;
+  font-size: 14px;
+  font-weight: 500;
+}
+.detail-details .text-details .title {
+  font-size: 24px;
+  font-weight: 600;
+}
+.detail-details .text-details .title-details {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.detail-details .text-details .price{
+    color: #1A2530;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.detail-details .text-details .about{
+    color: #707B81;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+/*  */
+
+.gallery-details{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.gallery-details .gallery-text{
+    color: #1A2530;
+    font-size: 18px;
+}
+.gallery-details .gallery-type{
+    display: flex;
+    gap: 16px;
+
+}
+.gallery-details .gallery-type .gallery-box{
+    width: 56px;
+    height: 56px;
+    background-color: #F8F9FA;
+    border-radius: 16px;
+    overflow: hidden; /* Скрываем содержимое, которое выходит за пределы блока */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.gallery-details .gallery-type .gallery-box img{
+  width: 100%; /* Изображение занимает всю ширину box */
+  height: 100%; /* Изображение занимает всю высоту box */
+  object-fit: cover;
+}
+.size-details{
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.size-details .size-text{
+  color: #1A2530;
+    font-size: 18px;
+}
+.size-details .size-type{
+  display: flex;
+    gap: 16px;
+}
+.size-details .size-type .size-box{
+  background-color: #F8F9FA;
+    border-radius: 16px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #707B81;
+}
+/*  */
+.accept-details{
+  display: flex;
+  gap: 89px;
+}
+.accept-details .price-details{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.accept-details .price-details .price-text{
+  color: #707B81;
+  font-size: 16px;
+}
+.accept-details .price-details .price-amount{
+  color: #1A2530;
+  font-size: 20px;
+  font-weight: 500;
+}
+.accept-details .accept-button{
+  background-color: #5B9EE1;
+  padding: 16px 32px;
+  font-size: 16px;
+  border: none;
+  border-radius: 16px;
+  color: #ffffff;
+}
