@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+.Favorit_wrap {
+    max-width: 375px;
+    min-height: 100vh;
+    margin: auto;
+    background: #F8F9FA;
+    padding: 30px 20px; 
+}
+
+
+/* Header */
+header {
+    margin: 0; 
+}
+
+/* Обертка для header */
+.wrapperfav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Стили для headbut и headcor */
+.favbut, .favcor {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 40px;
+    background: #FFF;
+}
+
+/* Стили для круга в headbut */
+.favbut {
+    padding: 15px;
+    gap: 14px;
+}
+
+.fav_circle {
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+/* Стили для лайк в fav_like */
+.fav_like {
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    width: 24px;
+    height: 24px;
+}
+
+
+.favor_text h1 {
+    color: #1A2530;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+/* Конец header */
+
+/* section popular start */
+    .favorit {
+    margin-top: 30px;
+  
+  }
+  
+  .favcart {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки с равной шириной */
+    gap: 20px; /* Расстояние между карточками */
+    padding-top: 15px;
+  }
+  
+  .fav_card {
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 14px 14px 14px;
+    border-radius: 16px;
+    background: #FFF;
+  }
+  
+  
+  .fav_image img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .fav_text span {
+    color:#5B9EE1;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    text-transform: uppercase;
+  }
+  
+  .fav_text h2 {
+    color: #1A2530;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  
+  .fav_buy {
+    padding-top: 12px;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+  }
+  
+  .fav_buy p {
+    color:#1A2530;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+  }
+  
+  
+  .cicr {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    padding-right: 10px;
+    gap: 5px;
+  }
+
+  .cicr div {
+    width: 15px;
+    height: 15px;
+    gap: 10px;
+    background-color: greenyellow;
+    border-radius: 50%;
+  }
+  
+  .heart-icon {
+    position: absolute;
+    top: 10px;
+    background: #fff;
+    align-items: center;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.fa-heart-o {
+    display: flex;
+}
+
+
+.heart-icon img {
+    color: #FF5A5F;
+    font-size: 18px;
+}
+
+.heart-icon:hover img {
+    color: #e63946;
+}
+
+  /* section populr end */
+  

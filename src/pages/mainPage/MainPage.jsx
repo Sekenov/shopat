@@ -115,8 +115,6 @@ function MainPage() {
         </div>
 
       </section>
-
-
     </div>
   );
 }
