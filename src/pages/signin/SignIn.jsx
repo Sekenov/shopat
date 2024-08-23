@@ -2,13 +2,18 @@ import React from 'react'
 import './SignIn.css';
 import arrow from '../../img/fovorit/Arrow.png';
 import google from '../../img/signin/Group 108.svg'
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function SignIn() {
+    const navigate = useNavigate();
+const handleBackClick = () => {
+    navigate(-1); 
+  };
   return (
     <div className="Signin">
         <header className="header">
             <div className="container_arrow">
-                <div className="img_arrow">
+                <div className="img_arrow" onClick={handleBackClick}>
                     <img className="arrow" src={arrow} alt=""></img>
                 </div>
             </div>
@@ -56,7 +61,7 @@ export default function SignIn() {
             </div>
 
             
-            <p className="have">Don’t have an account? <a href="/" className="free">Sign Up for Free</a></p>
+            <p className="have">Don’t have an account? <Link to={"/signup"}  className="free">Sign Up for Free</Link></p>
         </form>
     </div>
   )

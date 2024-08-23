@@ -4,15 +4,22 @@ import frameImage from '../../img/cross/crosovki.png';
 
 import arrow from '../../img/fovorit/Arrow.png';
 import serch from '../../img/Best/Icon.svg';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function AllProduct() {
+
+
+  const navigate = useNavigate();
+const handleBackClick = () => {
+    navigate(-1); 
+  };
   return (
     <div className='allProduct'>
 
     <header>
         <div className='wrapperbest'>
-            <div className='bestbut'>
+            <div className='bestbut' onClick={handleBackClick}>
                 <img className='best_circle' src={arrow}  alt="" />
             </div>
 

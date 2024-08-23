@@ -2,13 +2,19 @@ import React from 'react'
 import './SignUp.css';
 import arrow from '../../img/fovorit/Arrow.png';
 import gogle from '../../img/signin/Group 108.svg'
+import { useNavigate } from 'react-router-dom';
 
-export default function SignIn() {
+export default function SignUp() {
+
+    const navigate = useNavigate();
+const handleBackClick = () => {
+    navigate(-1); 
+  };
   return (
     <div className="Signin">
         <header className="headerup">
             <div className="up_container_arrow">
-                <div className="imgup_arrow">
+                <div className="imgup_arrow" onClick={handleBackClick}>
                     <img className="arrow" src={arrow} alt=""></img>
                 </div>
             </div>

@@ -8,6 +8,8 @@ import Profile from './pages/profile/Profile';
 import Favorit from './pages/favourite/Favorit';
 import BestSeller from "./pages/bestseller/BestSeller";
 import AllProduct from "./pages/allprouct/AllProduct";
+import SignIn from './pages/signin/SignIn';
+import SignUp from './pages/signup/SignUp';
 function App() {
   return (
     <Router>
@@ -21,6 +23,8 @@ function App() {
           <Route path="/favorit" element={<Favorit />} />
           <Route path="/bestseller" element={<BestSeller />} />
           <Route path="/allproduct" element={<AllProduct />} />
+          <Route path="/signIn" element={<SignIn />}/>
+          <Route path="/signUp" element={<SignUp />}/>
         </Routes>
         
       </div>

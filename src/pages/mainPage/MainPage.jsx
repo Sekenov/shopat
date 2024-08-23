@@ -81,7 +81,7 @@ function MainPage() {
         <section className="New">
           <div className="NewText">
             <h1>New Arrivals</h1>
-            <p>See all</p>
+            <Link to={"/allproduct"}>See all</Link>
           </div>
 
           <div className="New_card">
