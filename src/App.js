@@ -6,7 +6,7 @@ import MainPage from './pages/mainPage/MainPage';
 import Purchase from './pages/purchase/Purchase';
 import Profile from './pages/profile/Profile';
 import Favorit from './pages/favourite/Favorit';
-
+import BestSeller from "./pages/bestseller/BestSeller";
 function App() {
   return (
     <Router>
@@ -18,12 +18,11 @@ function App() {
           <Route path="/purchase" element={<Purchase />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/favorit" element={<Favorit />} />
-
+          <Route path="/favorit" element={<BestSeller />} />
         </Routes>
         
       </div>
     </Router>
-
   );
 }
 
