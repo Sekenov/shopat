@@ -7,6 +7,7 @@ import Purchase from './pages/purchase/Purchase';
 import Profile from './pages/profile/Profile';
 import Favorit from './pages/favourite/Favorit';
 import BestSeller from "./pages/bestseller/BestSeller";
+import AllProduct from "./pages/allprouct/AllProduct";
 function App() {
   return (
     <Router>
@@ -19,10 +20,12 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/favorit" element={<Favorit />} />
           <Route path="/bestseller" element={<BestSeller />} />
+          <Route path="/allproduct" element={<AllProduct />} />
         </Routes>
         
       </div>
     </Router>
+
   );
 }
 
