@@ -1,0 +1,169 @@
+.blockAllProduct{
+    padding: 20px;
+    width: 375px;
+    height: 750px;
+    background: #f8f9fa;
+}
+.blockAllProduct .header-product{
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    margin-bottom: 20px;
+    
+}
+.blockAllProduct .header-product .but1{
+    background: #ffffff;
+  padding: 10px;
+  text-align: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 40px;
+}
+.blockAllProduct .header-product .but2{
+    color: #1A2530;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+
+.blockAllProduct .AddProduct-inputBlock{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .blockAllProduct .AddProduct-inputBlock .titleName{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .blockAllProduct .AddProduct-inputBlock .titleName .title-titleName{
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .blockAllProduct .AddProduct-inputBlock .titleName .title-product{
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #fff;
+    border: none;
+  }
+  .blockAllProduct .AddProduct-inputBlock .descriptionProduct{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .blockAllProduct .AddProduct-inputBlock .descriptionProduct .desc-descriptionProduct{
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .blockAllProduct .AddProduct-inputBlock .descriptionProduct .desc-product{
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #fff;
+    border: none;
+  }
+  .blockAllProduct .AddProduct-inputBlock  .qtyProduct{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    /* margin-bottom: 20px; */
+  }
+  .blockAllProduct .AddProduct-inputBlock  .qtyProduct .qty-qtyProduct{
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .blockAllProduct .AddProduct-inputBlock  .qtyProduct .qty-product{
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #fff;
+    border: none;
+  }
+
+  .blockAllProduct .AddProduct-inputBlock .colorProduct{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    
+  }
+  .blockAllProduct .AddProduct-inputBlock .colorProduct .color-colorProduct{
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .blockAllProduct .AddProduct-inputBlock .colorProduct .color-product{
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #fff;
+    border: none;
+  }
+  
+
+  .blockAllProduct .AddProduct-inputBlock .categoryProduct{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    
+  }
+  .blockAllProduct .AddProduct-inputBlock .categoryProduct .category-categoryProduct{
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .blockAllProduct .AddProduct-inputBlock .categoryProduct .category-product{
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #fff;
+    border: none;
+  }
+
+
+  .blockAllProduct .AddProduct-inputBlock .priceProduct{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    
+  }
+  .blockAllProduct .AddProduct-inputBlock .priceProduct .price-priceProduct{
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .blockAllProduct .AddProduct-inputBlock .priceProduct .price-product{
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #fff;
+    border: none;
+  }
+
+
+  .blockAllProduct .AddProduct-inputBlock .photoProduct{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    
+  }
+  .blockAllProduct .AddProduct-inputBlock .photoProduct .photo-photoProduct{
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .blockAllProduct .AddProduct-inputBlock .photoProduct .photo-product{
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #fff;
+    border: none;
+  }
+
+
+
+  .blockAllProduct .AddProduct-inputBlock  .checkout-button{
+    /* padding: 0 20px; */
+    
+}
+.blockAllProduct .AddProduct-inputBlock  .checkout-button .button-submit{
+    width: 335px;
+    padding: 16px 126px;
+    border-radius: 50px;
+    border: none;
+    background-color: #5B9EE1;
+    color: white;
+}  
+.blockAllProduct .AddProduct-inputBlock  .checkout-button .button-submit Link{
+    color: white;
+}

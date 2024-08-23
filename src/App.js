@@ -10,6 +10,7 @@ import BestSeller from "./pages/bestseller/BestSeller";
 import AllProduct from "./pages/allprouct/AllProduct";
 import SignIn from './pages/signin/SignIn';
 import SignUp from './pages/signup/SignUp';
+import AddProduct from './pages/addProduct/AddProduct';
 function App() {
   return (
     <Router>
@@ -25,6 +26,7 @@ function App() {
           <Route path="/allproduct" element={<AllProduct />} />
           <Route path="/signIn" element={<SignIn />}/>
           <Route path="/signUp" element={<SignUp />}/>
+          <Route path="/addproduct" element={<AddProduct />}/>
         </Routes>
         
       </div>

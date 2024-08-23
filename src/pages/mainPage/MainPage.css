@@ -389,3 +389,10 @@ header {
   justify-content: space-around;
 }
 
+.blockFooter .footer .but1{
+  width: 24px;height: 24px;
+}
+.blockFooter .footer .but1 a img{
+  width: 100%;height: 100%;
+  color: #707B81;
+}

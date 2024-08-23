@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import profile from "./img/profile.svg";
 import like from "./img/like.svg";
 import home from "./img/home.svg";
+import addProduct from './img/addProduct.svg'
 function MainPage() {
   return (
     <>
@@ -107,6 +108,11 @@ function MainPage() {
           <div className="but1">
             <Link to={"/"}>
               <img src={home} alt="" />
+            </Link>
+          </div>
+          <div className="but1">
+            <Link to={"/addproduct"}>
+              <img src={addProduct} alt="" />
             </Link>
           </div>
           <div className="but1">
