@@ -5,15 +5,21 @@ import seting from '../../img/Best/Filter.svg';
 import serch from '../../img/Best/Icon.svg';
 import cros from '../../img/cross/crosovki.png'
 import live from '../../img/fovorit/Group.svg'
+import { useNavigate } from 'react-router-dom';
 
 
 export default function BestSeller() {
+
+    const navigate = useNavigate();
+const handleBackClick = () => {
+    navigate(-1); 
+  };
   return (
     <div className='Best_wrap'>
 
     <header>
         <div className='wrapperbest'>
-            <div className='bestbut'>
+            <div className='bestbut' onClick={handleBackClick}>
                 <img className='best_circle' src={arrow}  alt="" />
             </div>
 

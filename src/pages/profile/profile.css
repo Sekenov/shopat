@@ -1,0 +1,103 @@
+.profileBlock{
+    padding: 20px 20px 0 20px;
+    background: #f8f9fa;
+    height: 100vh;
+}
+.profileBlock .header-profile {
+
+    display: flex;
+    /* padding-top: 52px; */
+    align-items: center;
+    justify-content: center;
+    gap: 78px;
+    margin-bottom: 24px;
+  }
+  .profileBlock .header-profile .but1 {
+    background: #ffffff;
+    padding: 10px;
+    text-align: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 40px;
+  }
+  .profileBlock  .header-profile .but1 img {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+  }
+  .profileBlock  .header-profile .but2 {
+    font-size: 14px;
+  }
+  .profileBlock  .header-profile .but3 {
+
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    border-radius: 40px;
+  }
+  .profileBlock .header-profile .but3 img {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+  }
+  .profileBlock .avatar-profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 32px;
+  }
+  .profileBlock .avatar-profile  .name-avatar{
+    font-size: 20px;
+  }
+  .profileBlock .info-user{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .profileBlock .info-user .fullName{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .profileBlock .info-user .fullName .name-fullName{
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .profileBlock .info-user .fullName .name-user{
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #fff;
+    border: none;
+  }
+  .profileBlock .info-user .emailAddress{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .profileBlock .info-user .emailAddress .email-emailAddress{
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .profileBlock .info-user .emailAddress .email-user{
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #fff;
+    border: none;
+  }
+  .profileBlock .info-user  .passwordPass{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .profileBlock .info-user  .passwordPass .password-pass{
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .profileBlock .info-user  .passwordPass .password-user{
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #fff;
+    border: none;
+  }
