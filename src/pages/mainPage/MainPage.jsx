@@ -44,7 +44,7 @@ function MainPage() {
         <section className="Popular">
           <div className="PopularText">
             <h1>Popular Shoes</h1>
-            <p>See all</p>
+            <div className="text-popular"><Link to={"/bestseller"}>See all</Link></div>
           </div>
 
           <div className="wrapcart">
