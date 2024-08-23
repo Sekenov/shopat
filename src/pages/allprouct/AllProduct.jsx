@@ -17,7 +17,7 @@ export default function AllProduct() {
             </div>
 
             <div className="best_text">
-                <h1>Best Sellers</h1>
+                <h1>AllProduct</h1>
             </div>
 
             <div className="serch">
