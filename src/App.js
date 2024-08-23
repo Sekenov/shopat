@@ -1,11 +1,12 @@
-import BestSeller from "./pages/bestseller/BestSeller";
-import Favorit from "./pages/favourite/Favorit";
 
+import SignUp from "./pages/signup/SignUp"
 
 function App() {
   return (
     <div className="App">
-      <BestSeller />
+      <SignUp />
+      {/* <SignIn /> */}
+      {/* <BestSeller /> */}
       {/* <Favorit /> */}
       {/* <MainPage />  */}
     </div>

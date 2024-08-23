@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+.Signin {
+    max-width: 600px;
+    min-height: 100vh;
+    margin: auto;
+    background: #F8F9FA;
+    padding: 30px 20px; 
+}
+
+.img_arrow {
+    margin: 52px 0px 32px 10px ;
+    width: 44px;
+    height: 44px; 
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    flex-shrink: 0; 
+
+    border-radius: 40px;
+    background:  #FFF; 
+    cursor: pointer;
+}
+
+/* header style end */
+
+
+
+
+/* nav style start */
+
+.text {
+    margin-bottom: 40px;
+}
+
+.text .hel {
+    color: #1A2530;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 36px;
+    text-transform: capitalize;
+}
+
+.text .wel {
+    color: var(--Light-Sub-Text-Color, #707B81);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+/* nav style end */
+
+
+
+/* form registr style start */
+.form-registr {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px;
+    border-radius: 20px;
+
+  }
+  
+  ::placeholder {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  
+  .flex-column .em {
+    color: #1A2530;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+  
+  /* .inputForm {
+    display: flex;
+    padding: 16px 57px 16px 14px;
+    align-items: center;
+    gap: 12px;
+  } */
+  
+  .input {
+    width: 100%;
+    display: flex;
+    padding: 16px 57px 16px 14px;
+    align-items: center;
+    gap: 12px;
+    border-radius: 50px;
+    background: #FFF;
+    border: #1A2530;
+  }
+  
+  .ema {
+    margin-bottom: 30px;
+  }
+
+  .pas {
+    margin-bottom: 12px;
+  }
+
+  .input:focus {
+    outline: none;
+  }
+  
+
+  
+   .flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+  } 
+  
+   .flex-row > div > label {
+    font-size: 14px;
+    color: black;
+    font-weight: 400;
+  } 
+  
+  .recovery, .recovery a {
+    text-decoration: none;
+    color:  #707B81;
+    text-align: right;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    margin-bottom: 40px;
+  }
+
+  .btn {
+    margin-bottom: 113px;
+  }
+
+  .button-sign {
+    width: 100%;
+    display: inline-flex;
+    padding: 16px 32px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+    border-radius: 50px;
+    background:#5B9EE1;
+
+    color:  #FFF;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px; 
+    margin-bottom: 30px;
+
+    cursor: pointer;
+    outline: none;
+    border: #1A2530;
+  }
+  
+  .button-google {
+    width: 100%;
+    display: inline-flex;
+    padding: 15px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 50px;
+    background: #FFF;
+
+    color: #1A2530;
+ 
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    cursor: pointer;
+    border: #1A2530;
+  }
+  
+
+  .have {
+    text-align: center;
+    color:#707B81;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    text-transform: capitalize;
+  }
+  .free {
+    color: #1A2530;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    text-transform: capitalize;
+  }
+  
+
+  
+  /* form registr style end */
