@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Adamina&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+.mainBlockPurchase{
+    padding: 20px;
+    width: 375px;
+    height: 750px;
+    background: #f8f9fa;
+}
+.mainBlockPurchase .header-purchase{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    
+}
+.mainBlockPurchase .header-purchase .but1{
+    background: #ffffff;
+  padding: 10px;
+  text-align: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 40px;
+}
+.mainBlockPurchase .contact-information{
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 16px 20px;
+}
+.mainBlockPurchase .contact-information .info-p{
+    color: #1A2530;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+/*  */
+
+.mainBlockPurchase  .contact-information .info-own{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 12px;
+    /* align-items: center; */
+}
+.mainBlockPurchase  .contact-information .info-own .info-email{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.mainBlockPurchase  .contact-information .info-own .info-email .gap-email{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.mainBlockPurchase  .contact-information .info-own .info-email .block-img{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;height: 40px;
+    padding: 10px;
+    background-color: #F8F9FA;
+    border-radius: 12px;
+}
+.mainBlockPurchase  .contact-information .info-own .info-email .block-img img{
+    width: 100%; 
+  height: 100%; 
+  object-fit: cover;
+}
+.mainBlockPurchase  .contact-information .info-own .info-email .block-email{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.mainBlockPurchase  .contact-information .info-own .info-email .block-email .email-address{
+    color: #1A2530;
+    font-size: 14px;
+    font-weight: 400;
+}
+.mainBlockPurchase  .contact-information .info-own .info-email .block-email .text-adddress{
+    color: #707B81;
+    font-size: 13px;
+    /* font-weight: 400; */
+}
+.mainBlockPurchase  .contact-information .info-own .info-email .change-info{
+    width: 20px;height: 20px;
+}
+
+
+
+.mainBlockPurchase  .contact-information .info-own .info-phone{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.mainBlockPurchase  .contact-information .info-own .info-phone .gap-phone{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.mainBlockPurchase  .contact-information .info-own .info-phone .block-img{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;height: 40px;
+    padding: 10px;
+    background-color: #F8F9FA;
+    border-radius: 12px;
+}
+.mainBlockPurchase  .contact-information .info-own .info-phone .block-img img{
+    width: 100%; 
+  height: 100%; 
+  object-fit: cover;
+}
+.mainBlockPurchase  .contact-information .info-own .info-phone .block-phone{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.mainBlockPurchase  .contact-information .info-own .info-phone .block-phone .phone-address{
+    color: #1A2530;
+    font-size: 14px;
+    font-weight: 400;
+}
+.mainBlockPurchase  .contact-information .info-own .info-phone .block-phone .text-adddress{
+    color: #707B81;
+    font-size: 13px;
+    /* font-weight: 400; */
+}
+.mainBlockPurchase  .contact-information .info-own .info-phone .change-info{
+    width: 20px;height: 20px;
+}
+
+/*  */
+
+.mainBlockPurchase .contact-information .address-map{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+
+}
+.mainBlockPurchase .contact-information .address-map .gap{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.mainBlockPurchase .contact-information .address-map .gap .address{
+    color: #1A2530;
+    font-size: 14px;
+    font-weight: 500;
+}
+.mainBlockPurchase .contact-information .address-map .gap .input-map{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.mainBlockPurchase .contact-information .address-map .gap .input-map .map-map{
+    border: none;
+    padding: 5px 10px;
+    background-color: #fff;
+    border-radius: 15px;
+}
+.mainBlockPurchase .contact-information .address-map .karta{
+    width: 295px;height: 101px;
+     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainBlockPurchase .contact-information .address-map .karta img{
+    width: 100%; 
+  height: 100%; 
+  object-fit: cover;
+}
+.mainBlockPurchase .contact-information .paymant .paymant-name{
+    color: #1A2530;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+.mainBlockPurchase .contact-information .paymant .paymant-choose{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.mainBlockPurchase .contact-information .paymant .paymant-choose .gap{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.mainBlockPurchase .contact-information .paymant .paymant-choose .gap .block-pay{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;height: 40px;
+    padding: 10px;
+    background-color: #F8F9FA;
+    border-radius: 12px;
+
+}
+.mainBlockPurchase .contact-information .paymant .paymant-choose .gap .block-pay img{
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+}
+.mainBlockPurchase .contact-information .paymant .paymant-choose .gap .pay-pay{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.mainBlockPurchase .contact-information .paymant .paymant-choose .gap .pay-pay .name-pay{
+    color: #1A2530;
+    font-size: 14px;
+    font-weight: 500;
+}
+.mainBlockPurchase .contact-information .paymant .paymant-choose .gap .pay-pay .num-pay{
+    color: #707B81;
+    font-size: 12px;
+}
+
+
+
+.check-order-purchase{
+    position: fixed;
+    bottom: 0;
+    border-top-right-radius: 24px;
+    border-top-left-radius: 24px;
+    background-color: #fff;
+    width: 375px;
+
+}
+.check-order-purchase .padding-order{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.check-order-purchase .padding-order .price-order{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.check-order-purchase .padding-order .sale-order{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.check-order-purchase .padding-order .price-order .name-price{
+    color: #707B81;
+    font-size: 16px;
+}
+.check-order-purchase .padding-order .price-order .price-price{
+    color: #1A2530;
+    font-size: 18px;
+}
+.check-order-purchase .padding-order .sale-order .sale-name{
+    color: #707B81;
+    font-size: 16px;
+}
+.check-order-purchase .padding-order .sale-order .sale-price{
+    color: #1A2530;
+    font-size: 18px;
+}
+/*  */
+.line-line{
+    padding: 0 20px;
+}
+.line-line .line{
+    border-top: 1px dashed #CCCCCC; /* можно настроить толщину линии и цвет */
+    width: 100%; /* установить ширину линии */
+    /* margin: 20px 0; */
+}
+/*  */
+.check-order-purchase .padding-order .total-cost{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.check-order-purchase .padding-order .total-cost .cost-name{
+    font-size: 16px;
+    color: #1A2530;
+    font-weight: 500;
+}
+.check-order-purchase .padding-order .total-cost .cost-price{
+    color: #1A2530;
+    font-size: 20px;
+    font-weight: 500;
+}
+.check-order-purchase .checkout-button{
+    padding: 0 20px;
+    
+}
+.check-order-purchase .checkout-button .button-submit{
+    width: 335px;
+    padding: 16px 126px;
+    border-radius: 50px;
+    border: none;
+    background-color: #5B9EE1;
+    color: white;
+}   

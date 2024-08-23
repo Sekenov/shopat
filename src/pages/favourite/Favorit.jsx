@@ -4,15 +4,22 @@ import arrow from '../../img/fovorit/Arrow.png';
 import like from '../../img/fovorit/Icon.svg';
 import cros from '../../img/cross/crosovki.png'
 import live from '../../img/fovorit/Group.svg'
+import { useNavigate } from 'react-router-dom';
 
 
 export default function Favorit() {
+    const navigate = useNavigate();
+
+    // кнопка назад
+  const handleBackClick = () => {
+    navigate(-1); 
+  };
   return (
     <div className='Favorit_wrap'>
 
     <header>
         <div className='wrapperfav'>
-            <div className='favbut'>
+            <div className='favbut'  onClick={handleBackClick}>
                 <img className='fav_circle' src={arrow}  alt="" />
             </div>
 
