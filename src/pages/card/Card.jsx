@@ -5,14 +5,16 @@ import { Link } from "react-router-dom";
 const DEFAULT_IMAGE_URL = "/default-image.png";
 
 export default function Card({ item }) {
-  const imageUrl = item.attributes.img || DEFAULT_IMAGE_URL;
+  // Получаем URL изображения из данных
+  const imgData = item.attributes.img?.data?.[0]?.attributes;
+  const imageUrl = imgData ? `${process.env.REACT_APP_UPLOAD_URL}${imgData.url}` : DEFAULT_IMAGE_URL;
 
   return (
     <div className="wrapcart">
       <div className="Popular_card">
         <Link className="link" to={`/details/${item.id}`}>
           <div className="Popular_image">
-            <img src={imageUrl} alt="Product" />
+            <img src={imageUrl} alt={item.attributes.title || "Product"} />
           </div>
           <div className="Popular_text">
             {item.attributes.isNew && <div className="new">NEW</div>}
