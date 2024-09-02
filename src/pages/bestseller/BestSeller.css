@@ -91,72 +91,7 @@ header {
     padding-top: 15px;
   }
   
-  .best_card {
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 14px 14px 14px;
-    border-radius: 16px;
-    background: #FFF;
-  }
   
-  
-  .best_image img {
-    width: 100%;
-    border-radius: 8px;
-  }
-  
-  .best_text span {
-    color:#5B9EE1;
-    font-family: "Montserrat", sans-serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 16px;
-    text-transform: uppercase;
-  }
-  
-  .best_text h2 {
-    color: #1A2530;
-    font-family: "Montserrat", sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px;
-  }
-  
-  .best_buy {
-    padding-top: 12px;
-    display: flex;
-    text-align: center;
-    justify-content: space-between;
-  }
-  
-  .best_buy p {
-    color:#1A2530;
-    font-family: "Montserrat", sans-serif;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 16px;
-  }
-  
-  
-  .crug {
-    display: flex;
-    text-align: center;
-    justify-content: space-around;
-    padding-right: 10px;
-    gap: 5px;
-  }
-
-  .crug div {
-    width: 15px;
-    height: 15px;
-    gap: 10px;
-    background-color: greenyellow;
-    border-radius: 50%;
-  }
   
   /* section populr end */
   

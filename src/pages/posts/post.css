@@ -1,0 +1,75 @@
+
+.Popular {
+  margin-top: 30px;
+}
+
+.Popular .PopularText {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Popular .PopularText .bestPopular {
+  color: #1a2530;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.Popular .PopularText .text-popular a {
+  color: #5b9ee1;
+  text-align: right;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
+  /* section new start */
+  .New {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  
+  
+  .New  .NewText {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .New .NewText .newPopularTitle {
+    color: #1A2530;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  
+  .New  .NewText a {
+    color: #5B9EE1;
+    text-align: right;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    text-decoration: none;
+  }
+  
+
+
+
+
+
+
+  

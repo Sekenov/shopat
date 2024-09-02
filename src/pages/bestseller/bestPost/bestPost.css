@@ -1,23 +1,19 @@
-
-.SeePopular_card {
+.best_card {
+    position: relative;
     flex-direction: column;
     align-items: center;
-    /* padding: 12px; */
+    padding: 20px 14px 14px 14px;
     border-radius: 16px;
-    background:#FFF;
+    background: #FFF;
   }
   
-  .SeePopular_card  .Popular_image{
-    
-  }
-  .SeePopular_card  .Popular_image img {
+  
+  .best_card .best_image .best_img {
     width: 100%;
     border-radius: 8px;
   }
-  .SeePopular_card  .padd{
-    padding-left: 12px;
-  }
-  .SeePopular_card  .Popular_text span {
+  
+  .best_card .best_text .best {
     color:#5B9EE1;
     font-family: "Montserrat", sans-serif;
     font-size: 12px;
@@ -25,10 +21,9 @@
     font-weight: 400;
     line-height: 16px;
     text-transform: uppercase;
-    
   }
   
-  .SeePopular_card .Popular_text h2 {
+  .best_text .best_title {
     color: #1A2530;
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
@@ -37,15 +32,15 @@
     line-height: 20px;
   }
   
-  .buy {
+  .best_card .best_buy {
     padding-top: 12px;
-    
     display: flex;
     text-align: center;
+    gap: 10px;
     justify-content: space-between;
   }
   
-  .buy p {
+   .best_card  .best_buy .best_price {
     color:#1A2530;
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
@@ -55,21 +50,18 @@
   }
   
   
-  .add-to-cart {
-    background-color: #4a90e2;
-    color: #fff;
-    border: none;
-    width: 34px;
-    height: 35.5px;
-    font-size: 30px;
-    font-weight: 300;
-    line-height: 30px;
-    cursor: pointer;
-    bottom: 10px;
-    right: 10px;
-    flex-shrink: 0;
-    
-    border-top-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-  } 
-  
+  .best_card  .crug {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    padding-right: 10px;
+    gap: 5px;
+  }
+
+  .best_card  .crug div {
+    width: 15px;
+    height: 15px;
+    gap: 10px;
+    background-color: greenyellow;
+    border-radius: 50%;
+  }

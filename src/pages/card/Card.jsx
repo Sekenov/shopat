@@ -14,15 +14,15 @@ export default function Card({ item }) {
       <div className="Popular_card">
         <Link className="link" to={`/details/${item.id}`}>
           <div className="Popular_image">
-            <img src={imageUrl} alt={item.attributes.title || "Product"} />
+            <img src={imageUrl} alt={item.attributes.title || "Product"} className="Popular_img"/>
           </div>
           <div className="Popular_text">
-            {item.attributes.isNew && <div className="new">NEW</div>}
-            <h2>{item.attributes.title}</h2>
+            {item.attributes.isNew && <div className="new">BEst</div>}
+            <h2 className="Popular_title">{item.attributes.title}</h2>
           </div>
         </Link>
         <div className="buy">
-          <p>${item.attributes.price.toFixed(2)}</p>
+          <p className="Popular_price">${item.attributes.price.toFixed(2)}</p>
           <button className="add-to-cart">+</button>
         </div>
       </div>

@@ -3,8 +3,10 @@ import './post.css';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Card from '../card/Card';
+import SeePost from '../allprouct/seeAllProduct/seePost/SeePost';
 
 export default function Post() {
+  // запрос для бэст сэллера
   const [bestsellers, setBestsellers] = useState([]);
 
   useEffect(() => {
@@ -23,12 +25,36 @@ export default function Post() {
     };
     fetchBestsellers();
   }, []);
+// закончилс
 
+
+// запрос на новые продукты
+const [data, setData] = useState([]);
+
+useEffect(() => {
+  const fetchData = async () => {
+    try {
+      const res = await axios.get(`${process.env.REACT_APP_API_URL}/products?populate=*`, {
+        headers: {
+          Authorization: `Bearer ${process.env.REACT_APP_API_TOKEN}`,
+        },
+      });
+      console.log(res.data.data); // Убедитесь, что структура данных соответствует вашим ожиданиям
+      setData(res.data.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  fetchData();
+}, []);
+
+// закончился
   return (
     <>
       <section className="Popular">
         <div className="PopularText">
-          <h1>Popular Shoes</h1>
+          <h1 className='bestPopular'>Best Seller</h1>
           <div className="text-popular">
             <Link to={"/bestseller"}>See all</Link>
           </div>
@@ -44,11 +70,17 @@ export default function Post() {
       </section>
       <section className="New">
         <div className="NewText">
-          <h1>New Arrivals</h1>
+          <h1 className='newPopularTitle'>New Arrivals</h1>
           <Link to={"/allproduct"}>See all</Link>
         </div>
-        {/* Добавьте сюда код для отображения новых поступлений */}
       </section>
+      {data.length > 0 ? (
+            data.map((item) => (
+              <SeePost item={item} key={item.id} />
+            ))
+          ) : (
+            <p>No products found.</p>
+          )}
     </>
   );
 }
