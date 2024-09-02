@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Основной контейнер */
+.main-page {
+    max-width: 375px;
+    min-height: 100vh;
+    margin: auto;
+    background: #F8F9FA;
+    padding: 30px 20px; 
+}
+
+/* Header */
+header {
+    margin: 0; 
+}
+
+/* Обертка для header */
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Стили для headbut и headcor */
+.headbut, .headcor {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 40px;
+    background: #FFF;
+}
+
+/* Стили для круга в headbut */
+.headbut {
+    padding: 15px;
+    gap: 14px;
+}
+
+.circle {
+    background-image: url('/src/img/apps-circle.svg');
+    background-size: cover;
+    background-position: center;
+    width: 15px;
+    height: 14px;
+}
+
+/* Стили для корзины в headcor */
+.corzin {
+    background-image: url('/src/img/Frame.png');
+    background-size: cover;
+    background-position: center;
+    width: 24px;
+    height: 24px;
+}
+
+/* Стили для формы поиска */
+.form {
+    width: 206px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 0.8em;
+    border-radius: 20px;
+    background: #fff;
+}
+
+/* Убираем стандартный стиль кнопки */
+.form button {
+    border: none;
+    background: none;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-image: url('/src/img/Vector.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 0.8em; 
+    padding: 0;
+}
+
+/* Стили для инпута */
+.input {
+    font-size: 1rem;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+}
+
+
+.form button:focus, .form button:active {
+    outline: none;
+}
+
+
+
+
+.brands-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px; 
+  }
+  
+  .brand {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-radius: 40px;
+    background: #FFF;
+  } 
+
+  .nike {
+    background-image: url('/src/img/brend/nike.svg');
+
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+  }
+  
+  .puma {
+    background-image: url('/src/img/brend/puma.svg');
+
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    
+  }
+  
+  .under-armour {
+    background-image: url('/src/img/brend/ander.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+  }
+  
+  .adidas {
+    background-image: url('/src/img/brend/adidas.svg');
+
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+  }
+  
+  .converse {
+    background-image: url('/src/img/brend/convers.svg');
+
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+  }
