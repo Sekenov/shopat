@@ -10,7 +10,7 @@ export default function Card({ item }) {
   const imageUrl = imgData ? `${process.env.REACT_APP_UPLOAD_URL}${imgData.url}` : DEFAULT_IMAGE_URL;
 
   return (
-    <div className="wrapcart">
+    // <div className="wrapcart">
       <div className="Popular_card">
         <Link className="link" to={`/details/${item.id}`}>
           <div className="Popular_image">
@@ -26,6 +26,6 @@ export default function Card({ item }) {
           <button className="add-to-cart">+</button>
         </div>
       </div>
-    </div>
+    // </div>
   );
 }

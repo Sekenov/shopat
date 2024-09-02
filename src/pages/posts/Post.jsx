@@ -4,52 +4,36 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Card from '../card/Card';
 import SeePost from '../allprouct/seeAllProduct/seePost/SeePost';
+import useFetch from '../../hooks/useFetch'; // Импортируем как экспорт по умолчанию
 
 export default function Post() {
-  // запрос для бэст сэллера
-  const [bestsellers, setBestsellers] = useState([]);
+  // Запрос для бестселлеров
+  const { data: bestsellers = [], loading: loadingBestsellers, error: errorBestsellers } = useFetch(`/products?filters[isBest][$eq]=true&populate=img`);
+
+  // Запрос на новые продукты
+  const [data, setData] = useState([]);
+  const [loadingNew, setLoadingNew] = useState(true);
+  const [errorNew, setErrorNew] = useState(null);
 
   useEffect(() => {
-    const fetchBestsellers = async () => {
+    const fetchData = async () => {
       try {
-        // Фильтруем продукты, которые являются бестселлерами
-        const res = await axios.get(`${process.env.REACT_APP_API_URL}/products?filters[isBest][$eq]=true&populate=img`, {
+        const res = await axios.get(`${process.env.REACT_APP_API_URL}/products?populate=*`, {
           headers: {
             Authorization: `Bearer ${process.env.REACT_APP_API_TOKEN}`,
           },
-        });
-        setBestsellers(res.data.data); // Сохраняем данные
+        }); 
+        setData(res.data.data);
       } catch (err) {
-        console.log(err);
+        setErrorNew(err);
+      } finally {
+        setLoadingNew(false);
       }
     };
-    fetchBestsellers();
+
+    fetchData();
   }, []);
-// закончилс
 
-
-// запрос на новые продукты
-const [data, setData] = useState([]);
-
-useEffect(() => {
-  const fetchData = async () => {
-    try {
-      const res = await axios.get(`${process.env.REACT_APP_API_URL}/products?populate=*`, {
-        headers: {
-          Authorization: `Bearer ${process.env.REACT_APP_API_TOKEN}`,
-        },
-      });
-      console.log(res.data.data); // Убедитесь, что структура данных соответствует вашим ожиданиям
-      setData(res.data.data);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  fetchData();
-}, []);
-
-// закончился
   return (
     <>
       <section className="Popular">
@@ -59,14 +43,15 @@ useEffect(() => {
             <Link to={"/bestseller"}>See all</Link>
           </div>
         </div>
-
-        {bestsellers.length > 0 ? (
-          bestsellers.map((item) => (
-            <Card item={item} key={item.id} />
-          ))
-        ) : (
-          <p>No bestsellers found.</p>
-        )}
+        <div className="wrapcart">
+          {loadingBestsellers ? <p>Loading...</p> : errorBestsellers ? <p>Error loading bestsellers.</p> : bestsellers.length > 0 ? (
+            bestsellers.map((item) => (
+              <Card item={item} key={item.id} />
+            ))
+          ) : (
+            <p>No bestsellers found.</p>
+          )}
+        </div>
       </section>
       <section className="New">
         <div className="NewText">
@@ -74,13 +59,15 @@ useEffect(() => {
           <Link to={"/allproduct"}>See all</Link>
         </div>
       </section>
-      {data.length > 0 ? (
-            data.map((item) => (
-              <SeePost item={item} key={item.id} />
-            ))
-          ) : (
-            <p>No products found.</p>
-          )}
+      <div className="wrapcart">
+        {loadingNew ? <p>Loading...</p> : errorNew ? <p>Error loading new products.</p> : data.length > 0 ? (
+          data.map((item) => (
+            <SeePost item={item} key={item.id} />
+          ))
+        ) : (
+          <p>No products found.</p>
+        )}
+      </div>
     </>
   );
 }

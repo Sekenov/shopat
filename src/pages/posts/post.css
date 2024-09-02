@@ -9,7 +9,22 @@
   justify-content: space-between;
   align-items: center;
 }
-
+.wrapcart {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+gap: 10px; 
+padding-top: 15px;
+align-items: flex-start;
+justify-content: space-evenly;
+}
+.Popular  .wrapcart {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+gap: 10px; 
+padding-top: 15px;
+align-items: flex-start;
+justify-content: space-evenly;
+}
 .Popular .PopularText .bestPopular {
   color: #1a2530;
   font-family: "Montserrat", sans-serif;
