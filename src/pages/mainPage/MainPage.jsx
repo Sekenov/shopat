@@ -16,7 +16,7 @@
       <>
         <div className="main-page">
           <Header />
-
+          
         
 
         <Post />

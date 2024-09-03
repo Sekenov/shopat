@@ -2,12 +2,12 @@
     position: relative;
     flex-direction: column;
     align-items: center;
-    padding: 20px 14px 14px 14px;
+    /* padding: 20px 14px 14px 14px; */
     border-radius: 16px;
     background: #FFF;
   }
   
-  
+  .best_card .best_image{}
   .best_card .best_image .best_img {
     width: 100%;
     border-radius: 8px;
@@ -35,7 +35,7 @@
   .best_card .best_buy {
     padding-top: 12px;
     display: flex;
-    text-align: center;
+    text-align: center; 
     gap: 10px;
     justify-content: space-between;
   }

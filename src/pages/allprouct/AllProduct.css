@@ -22,56 +22,8 @@ header {
 }
 
 /* Обертка для header */
-.wrapperbest {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-/* Стили для headbut и headcor */
-.bestbut {
-    display: flex;
-    width: 44px;
-    height: 44px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 40px;
-    background: #FFF;
-}
-
-/* Стили для круга в headbut */
-.bestbut {
-    padding: 15px;
-    gap: 14px;
-}
-
-.best_circle {
-    text-align: center;
-    background-size: cover;
-    background-position: center;
-    width: 24px;
-    height: 24px;
-    flex-shrink: 0;
-}
-
-.best_text h1 {
-    color: #1A2530;
-    font-family: "Montserrat", sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px;
-}
 
 
-.best_set {
-    width: 24px;
-    height: 24px;
-    flex-shrink: 0;
-}
-
-/* Конец header */
 
 
 

@@ -3,8 +3,6 @@ import './BestSeller.css';
 import arrow from '../../img/fovorit/Arrow.png';
 import seting from '../../img/Best/Filter.svg';
 import serch from '../../img/Best/Icon.svg';
-import cros from '../../img/cross/crosovki.png'
-import live from '../../img/fovorit/Group.svg'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import BestPost from './bestPost/BestPost';

@@ -81,7 +81,7 @@ header {
 /* section popular start */
     .best {
     margin-top: 16px;
-  
+        
   }
   
   .bestcart {
@@ -89,6 +89,7 @@ header {
     grid-template-columns: repeat(2, 1fr); /* 2 колонки с равной шириной */
     gap: 20px; /* Расстояние между карточками */
     padding-top: 15px;
+    
   }
   
   

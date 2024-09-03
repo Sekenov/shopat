@@ -4,7 +4,7 @@ import { makeRequest } from "./makeRequest";
 const useFetch = (url) => {
   const [data, setData] = useState(null);
   const [error, setError] = useState(false);
-  const [loading, setLoading] = useState(true); // Изначально загрузка идет
+  const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
     const fetchData = async () => {
@@ -14,13 +14,13 @@ const useFetch = (url) => {
             Authorization: `Bearer ${process.env.REACT_APP_API_TOKEN}`,
           },
         });
-        console.log(res.data.data); // Убедитесь, что структура данных соответствует вашим ожиданиям
+        console.log(res.data.data); 
         setData(res.data.data);
-        setError(false); // Сброс ошибки, если запрос успешный
+        setError(false); 
       } catch (err) {
         setError(true);
       } finally {
-        setLoading(false); // Устанавливаем загрузку как завершенную независимо от успеха или ошибки
+        setLoading(false); 
       }
     };
 

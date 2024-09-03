@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Card from '../card/Card';
 import SeePost from '../allprouct/seeAllProduct/seePost/SeePost';
-import useFetch from '../../hooks/useFetch'; // Импортируем как экспорт по умолчанию
+import useFetch from '../../hooks/useFetch';  
 
 export default function Post() {
   // Запрос для бестселлеров
