@@ -12,6 +12,7 @@ import SignIn from './pages/signin/SignIn';
 import SignUp from './pages/signup/SignUp';
 import AddProduct from './pages/addProduct/AddProduct';
 import ProductByCategory from './pages/header/productByCategory/ProductByCategory';
+import Footer from './pages/footer/Footer';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="/addproduct" element={<AddProduct />}/>
           <Route path="/products/:id" element={<ProductByCategory />}/>
         </Routes>
+        <Footer />
       </div>
     </Router>
   );

@@ -19,7 +19,7 @@ function MainPage() {
         <Header onBrandSelect={setSelectedBrand} /> {/* Передаем функцию для выбора бренда */}
         <Post selectedBrand={selectedBrand} /> 
       </div>
-      <Footer  setSelectedBrand={setSelectedBrand} />
+      <Footer selectedBrand={selectedBrand} setSelectedBrand={setSelectedBrand} />
      
     </>
   );

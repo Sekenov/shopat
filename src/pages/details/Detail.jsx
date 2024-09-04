@@ -4,7 +4,6 @@ import axios from 'axios';
 import "./detail.css";
 import backButton from "./img/backButton.svg";
 import cart from './img/Cart.svg';
-// Ваши другие импорты
 
 export default function Detail() {
   const { id } = useParams(); // Получаем ID продукта из URL
@@ -15,22 +14,24 @@ export default function Detail() {
 
   useEffect(() => {
     const fetchProduct = async () => {
-      try {
-        const res = await axios.get(`${process.env.REACT_APP_API_URL}/products/${id}?populate=*`, {
-          headers: {
-            Authorization: `Bearer ${process.env.REACT_APP_API_TOKEN}`,
-          },
-        });
-        setProduct(res.data.data);
-      } catch (err) {
-        setError(err);
-      } finally {
-        setLoading(false);
-      }
-    };
+        try {
+          const res = await axios.get(`${process.env.REACT_APP_API_URL}/products/${id}?populate[img]=*&populate[sizes]=*`, {
+            headers: {
+              Authorization: `Bearer ${process.env.REACT_APP_API_TOKEN}`,
+            },
+          });
+          console.log('Fetched product data:', res.data); // Отладочное сообщение
+          setProduct(res.data.data);
+        } catch (err) {
+          setError(err);
+        } finally {
+          setLoading(false);
+        }
+      };
+      
 
     fetchProduct();
-  }, [id]); // Запрос при изменении ID
+  }, [id]);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error loading product.</p>;
@@ -43,6 +44,7 @@ export default function Detail() {
   const handleBackClick = () => {
     navigate(-1);
   };
+
   return (
     <>
       <div className='mainBlock'>
@@ -80,8 +82,10 @@ export default function Detail() {
           <div className='size-details'>
             <h2 className='size-text'>Size</h2>
             <div className='size-type'>
-              {product.attributes.sizes?.map((size, index) => (
-                <div className='size-box' key={index}>{size}</div>
+              {product.attributes.sizes?.data?.map((sizeItem, index) => (
+                <div className='size-box' key={index}>
+                  {sizeItem.attributes.size} {/* Убедитесь, что имя поля `size` правильно */}
+                </div>
               )) || <p>No sizes available</p>}
             </div>
           </div>

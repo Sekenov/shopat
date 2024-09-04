@@ -18,7 +18,7 @@
   }
   .mainBlockCart .cart{
     margin-top: 60px; /* Отступ сверху, чтобы не перекрывать фиксированный заголовок */
-    margin-bottom: 190px; /* Отступ снизу, чтобы не перекрывать фиксированный футер */
+    margin-bottom: 260px; /* Отступ снизу, чтобы не перекрывать фиксированный футер */
     flex-grow: 1; /* Занимает оставшееся пространство */
     overflow-y: auto; /* Включаем вертикальную прокрутку */
     padding-right: 10px; /* Добавляем отступ для скроллбара */
@@ -205,7 +205,7 @@ width: 100%; /* Изображение занимает всю ширину box 
 }
 .check-order .checkout-button{
     padding: 0 20px;
-    
+    margin-bottom: 70px;
 }
 .check-order .checkout-button .button-submit{
     width: 335px;

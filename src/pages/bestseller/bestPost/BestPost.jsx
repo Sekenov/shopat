@@ -1,5 +1,6 @@
 import React from 'react'
 import './bestPost.css'
+import { Link } from 'react-router-dom';
 const DEFAULT_IMAGE_URL = "/default-image.png";
 export default function BestPost({ item }) {
     const imgData = item.attributes.img?.data?.[0]?.attributes;
@@ -8,6 +9,7 @@ export default function BestPost({ item }) {
   return (
     <>
     <div className="best_card">
+        <Link to={`/details/${item.id}`} className="link">
             <div className="best_image">
                 <img className="best_img" src={imageUrl} alt={item.attributes.title || "Product"} />
             </div>
@@ -15,6 +17,8 @@ export default function BestPost({ item }) {
             {item.attributes.isNew && <div className="best">Best</div>}
                 <h2 className='best_title'>{item.attributes.title}</h2>
             </div>
+        </Link>
+
             <div className="best_buy">
                 <p className='best_price'>${item.attributes.price.toFixed(2)}</p>
                 <div className="crug">

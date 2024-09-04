@@ -46,7 +46,8 @@
     align-items: center;
     display: flex;
     text-align: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
   }
   
   .buy p {

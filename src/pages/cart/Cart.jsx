@@ -213,6 +213,84 @@ export default function Cart() {
               </div>
             </div>
           </div>
+          <div className="cart-order">
+            <div className="cart-gap">
+              <div className="img-order">
+                <img src={nikeCart} alt="" />
+              </div>
+
+              <div className="about-order">
+                <div className="gap-order">
+                  <p className="name-about">Nike CLub max</p>
+                  <p className="price-about">$ 550</p>
+                </div>
+                <div className="amount-order">
+                  <div className="minus-amount">-</div>
+                  <p className="amount-amount">1</p>
+                  <div className="plus-amount">+</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="action-order">
+              <p className="size-action">L</p>
+              <div className="delete-action">
+                <img src={trash} alt="" />
+              </div>
+            </div>
+          </div>
+          <div className="cart-order">
+            <div className="cart-gap">
+              <div className="img-order">
+                <img src={nikeCart} alt="" />
+              </div>
+
+              <div className="about-order">
+                <div className="gap-order">
+                  <p className="name-about">Nike CLub max</p>
+                  <p className="price-about">$ 550</p>
+                </div>
+                <div className="amount-order">
+                  <div className="minus-amount">-</div>
+                  <p className="amount-amount">1</p>
+                  <div className="plus-amount">+</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="action-order">
+              <p className="size-action">L</p>
+              <div className="delete-action">
+                <img src={trash} alt="" />
+              </div>
+            </div>
+          </div>
+          <div className="cart-order">
+            <div className="cart-gap">
+              <div className="img-order">
+                <img src={nikeCart} alt="" />
+              </div>
+
+              <div className="about-order">
+                <div className="gap-order">
+                  <p className="name-about">Nike CLub max</p>
+                  <p className="price-about">$ 550</p>
+                </div>
+                <div className="amount-order">
+                  <div className="minus-amount">-</div>
+                  <p className="amount-amount">1</p>
+                  <div className="plus-amount">+</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="action-order">
+              <p className="size-action">L</p>
+              <div className="delete-action">
+                <img src={trash} alt="" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div className="check-order">

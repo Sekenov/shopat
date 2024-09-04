@@ -1,5 +1,6 @@
 import React from 'react';
 import './seePost.css';
+import { Link } from 'react-router-dom';
 
 export default function SeePost({ item }) {
     // Проверяем, существует ли объект img и его вложенные данные
@@ -8,6 +9,7 @@ export default function SeePost({ item }) {
 
     return (
         <div className="SeePopular_card">
+            <Link to={`/details/${item.id}`} className="link">
             <div className="Popular_image">
                 <img src={imageUrl} alt={item.attributes.title || "Product"} />
             </div>
@@ -24,11 +26,14 @@ export default function SeePost({ item }) {
                     )}
                     <h2>{item.attributes.title}</h2>
                 </div>
-                <div className="buy">
+                
+            </div>
+            </Link>
+            
+            <div className="buy">
                     <p>${item.attributes.price.toFixed(2)}</p>
                     <button className="add-to-cart">+</button>
                 </div>
-            </div>
         </div>
     );
 }
