@@ -1,25 +1,33 @@
 
 
 .wrapcart .Popular_card {
-  flex-direction: column;
+  
   align-items: center;
   padding: 9px;
   border-radius: 16px;
   background: #fff;
   text-decoration: none;
+  
 
 }
 .wrapcart .Popular_card a{
   text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 .wrapcart .Popular_card .Popular_image{
   overflow: hidden;
+  width: 100%; /* Задаем ширину карточки */
+  max-width: 160px;
+  
   
 }
 .wrapcart .Popular_card .Popular_image .Popular_img {
-  width: 100%;
+  
   border-radius: 8px;
-  min-height: 100%;
+  width: 100%; /* Изображение занимает всю ширину карточки */
+  height: auto;
   object-fit: cover;
 }
 

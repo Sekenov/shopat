@@ -1,17 +1,16 @@
-import React from 'react'
-import './header.css'
-import { Link } from 'react-router-dom'
-import useFetch from '../../hooks/useFetch'
+import React from 'react';
+import './header.css';
+import useFetch from '../../hooks/useFetch';
+import { Link } from 'react-router-dom';
 
-export default function Header() {
-  const {data: categories, loading, error} = useFetch(`/categories?populate=*`)
-  
-  if (loading) return <h1>Loading...</h1>
-  if (error) return <h1>Error</h1>
-  
-  // Ограничение вывода до 5 категорий
+export default function Header({ onBrandSelect }) {
+  const { data: categories, loading, error } = useFetch(`/categories?populate=*`);
+
+  if (loading) return <h1>Loading...</h1>;
+  if (error) return <h1>Error</h1>;
+
   const displayedCategories = categories?.slice(0, 5);
-  
+
   return (
     <>
       <header>
@@ -29,22 +28,30 @@ export default function Header() {
               type="text"
             />
           </form>
-
-          <Link to={"/cart"} className="headcor">
+<Link to="/cart">
+          <div className="headcor">
+            
             <span className="corzin"></span>
-          </Link>
+           
+          </div> </Link>
         </div>
       </header>
       
       <main>
         <div className="brands-container">
           {displayedCategories?.map((category) => (
-            <Link to={`/products/${category.id}`} key={category.id} className="">
-              <p className='categoryName'>{category.attributes.name}</p> {/* Отображение имени категории */}
-            </Link>
+            <div 
+              key={category.id} 
+              className="category" 
+              onClick={() => onBrandSelect(category.id)} // При клике на категорию вызывается переданная функция
+            >
+              <p className='categoryName'>{category.attributes.name}</p>
+            </div>
           ))}
         </div>
       </main>
     </>
-  )
+  );
 }
+
+

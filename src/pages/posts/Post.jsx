@@ -1,38 +1,58 @@
+
 import React, { useEffect, useState } from 'react';
 import './post.css';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Card from '../card/Card';
 import SeePost from '../allprouct/seeAllProduct/seePost/SeePost';
-import useFetch from '../../hooks/useFetch';  
+import useFetch from '../../hooks/useFetch';
 
-export default function Post() {
-  // Запрос для бестселлеров
-  const { data: bestsellers = [], loading: loadingBestsellers, error: errorBestsellers } = useFetch(`/products?filters[isBest][$eq]=true&populate=img`);
-
-  // Запрос на новые продукты
+export default function Post({ selectedBrand }) {
+  // Запрос для всех продуктов (новые или по выбранному бренду)
   const [data, setData] = useState([]);
-  const [loadingNew, setLoadingNew] = useState(true);
-  const [errorNew, setErrorNew] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`${process.env.REACT_APP_API_URL}/products?populate=*`, {
+        const url = selectedBrand
+          ? `${process.env.REACT_APP_API_URL}/products?filters[categories][id][$eq]=${selectedBrand}&populate=*`
+          : `${process.env.REACT_APP_API_URL}/products?populate=*`;
+
+        const res = await axios.get(url, {
           headers: {
             Authorization: `Bearer ${process.env.REACT_APP_API_TOKEN}`,
           },
         }); 
         setData(res.data.data);
       } catch (err) {
-        setErrorNew(err);
+        setError(err);
       } finally {
-        setLoadingNew(false);
+        setLoading(false);
       }
     };
 
     fetchData();
-  }, []);
+  }, [selectedBrand]); // Перезагружаем данные при изменении выбранного бренда
+
+  // Запрос для бестселлеров, вне зависимости от выбранного бренда
+  const { data: bestsellers = [], loading: loadingBestsellers, error: errorBestsellers } = useFetch(`/products?filters[isBest][$eq]=true&populate=img`);
+
+  // Если бренд выбран, показываем только продукты бренда
+  if (selectedBrand) {
+    return (
+      <div className="wrapcart">
+        {loading ? <p>Loading...</p> : error ? <p>Error loading products.</p> : data.length > 0 ? (
+          data.map((item) => (
+            <SeePost item={item} key={item.id} />
+          ))
+        ) : (
+          <p>No products found.</p>
+        )}
+      </div>
+    );
+  }
 
   return (
     <>
@@ -60,7 +80,7 @@ export default function Post() {
         </div>
       </section>
       <div className="wrapcart">
-        {loadingNew ? <p>Loading...</p> : errorNew ? <p>Error loading new products.</p> : data.length > 0 ? (
+        {loading ? <p>Loading...</p> : error ? <p>Error loading products.</p> : data.length > 0 ? (
           data.map((item) => (
             <SeePost item={item} key={item.id} />
           ))
