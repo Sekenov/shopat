@@ -9,8 +9,8 @@
 
 
 .Best_wrap {
-    max-width: 375px;
-    min-height: 100vh;
+    min-width: 375px;
+    height: 100vh;
     margin: auto;
     background: #F8F9FA;
     padding: 30px 20px; 

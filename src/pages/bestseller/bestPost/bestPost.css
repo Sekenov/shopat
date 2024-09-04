@@ -2,14 +2,20 @@
     position: relative;
     flex-direction: column;
     align-items: center;
-    /* padding: 20px 14px 14px 14px; */
+    padding: 9px;
     border-radius: 16px;
     background: #FFF;
   }
   
-  .best_card .best_image{}
+  .best_card .best_image{
+    overflow: hidden;
+    width: 100%; /* Задаем ширину карточки */
+    max-width: 160px;
+  }
   .best_card .best_image .best_img {
-    width: 100%;
+    width: 100%; /* Изображение занимает всю ширину карточки */
+    height: auto;
+    object-fit: cover;
     border-radius: 8px;
   }
   
