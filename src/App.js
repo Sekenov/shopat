@@ -27,10 +27,11 @@ function App() {
           <Route path="/favorit" element={<Favorit />} />
           <Route path="/bestseller" element={<BestSeller />} />
           <Route path="/allproduct" element={<AllProduct />} />
-          <Route path="/signIn" element={<SignIn />}/>
-          <Route path="/signUp" element={<SignUp />}/>
-          <Route path="/addproduct" element={<AddProduct />}/>
-          <Route path="/products/:id" element={<ProductByCategory />}/>
+          <Route path="/signIn" element={<SignIn />} />
+          <Route path="/signUp" element={<SignUp />} />
+          <Route path="/addproduct" element={<AddProduct />} />
+          <Route path="/products/:id" element={<ProductByCategory />} />
+          <Route path="/brand/:brandId" element={<MainPage />} /> {/* Маршрут для брендов */}
         </Routes>
         <Footer />
       </div>

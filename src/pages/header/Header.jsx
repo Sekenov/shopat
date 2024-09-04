@@ -1,15 +1,20 @@
 import React from 'react';
 import './header.css';
 import useFetch from '../../hooks/useFetch';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
-export default function Header({ onBrandSelect }) {
+export default function Header() {
+  const navigate = useNavigate();
   const { data: categories, loading, error } = useFetch(`/categories?populate=*`);
 
   if (loading) return <h1>Loading...</h1>;
   if (error) return <h1>Error</h1>;
 
   const displayedCategories = categories?.slice(0, 5);
+
+  const handleCategoryClick = (categoryId) => {
+    navigate(`/brand/${categoryId}`); // Перенаправляем на страницу с выбранным брендом
+  };
 
   return (
     <>
@@ -28,12 +33,11 @@ export default function Header({ onBrandSelect }) {
               type="text"
             />
           </form>
-<Link to="/cart">
-          <div className="headcor">
-            
-            <span className="corzin"></span>
-           
-          </div> </Link>
+          <Link to="/cart">
+            <div className="headcor">
+              <span className="corzin"></span>
+            </div>
+          </Link>
         </div>
       </header>
       
@@ -43,7 +47,7 @@ export default function Header({ onBrandSelect }) {
             <div 
               key={category.id} 
               className="category" 
-              onClick={() => onBrandSelect(category.id)} // При клике на категорию вызывается переданная функция
+              onClick={() => handleCategoryClick(category.id)} // Используем новый обработчик
             >
               <p className='categoryName'>{category.attributes.name}</p>
             </div>
@@ -53,5 +57,3 @@ export default function Header({ onBrandSelect }) {
     </>
   );
 }
-
-

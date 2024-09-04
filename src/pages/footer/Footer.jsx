@@ -1,43 +1,42 @@
-import React from 'react'
-import './footer.css'
-import { Link } from 'react-router-dom'
-import profile from "./img/profile.svg"
+import React from 'react';
+import './footer.css';
+import { Link, useNavigate } from 'react-router-dom';
+import profile from "./img/profile.svg";
 import like from "./img/like.svg";
 import home from "./img/home.svg";
-import addProduct from './img/addProduct.svg'
-import { useNavigate } from 'react-router-dom';
-export default function Footer({ setSelectedBrand}) {
+import addProduct from './img/addProduct.svg';
+
+export default function Footer() {
   const navigate = useNavigate();
-    const handlehomeClick = ()  => {
-        // setSelectedBrand(null);
-        navigate('/');
-        setSelectedBrand(null);
-       
-      }
+
+  const handleHomeClick = () => {
+    navigate('/'); // Перенаправляем на главную страницу
+  };
+
   return (
-     <div className="blockFooter">
-    <div className="footer">
-      <div className="but1">
-        <Link to={"/favorit"}>
-          <img src={like} alt="" />
-        </Link>
-      </div>
-      <div className="but1">
-        <Link to={"/"} onClick={handlehomeClick}>
-          <img src={home} alt="" />
-        </Link>
-      </div>
-      <div className="but1">
-        <Link to={"/addproduct"}>
-          <img src={addProduct} alt="" />
-        </Link>
-      </div>
-      <div className="but1">
-        <Link to={"/profile"}>
-          <img src={profile} alt="" />
-        </Link>
+    <div className="blockFooter">
+      <div className="footer">
+        <div className="but1">
+          <Link to="/favorit">
+            <img src={like} alt="Favorites" />
+          </Link>
+        </div>
+        <div className="but1">
+          <Link to="/" onClick={handleHomeClick}>
+            <img src={home} alt="Home" />
+          </Link>
+        </div>
+        <div className="but1">
+          <Link to="/addproduct">
+            <img src={addProduct} alt="Add Product" />
+          </Link>
+        </div>
+        <div className="but1">
+          <Link to="/profile">
+            <img src={profile} alt="Profile" />
+          </Link>
+        </div>
       </div>
     </div>
-  </div>
-  )
+  );
 }
