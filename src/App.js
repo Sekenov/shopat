@@ -1,11 +1,13 @@
 
-import AllProduct from "./pages/allprouct/AllProduct";
+
+import Search from "./pages/search/Search";
 
 
 function App() {
   return (
     <div className="App">
-      <AllProduct />
+      <Search />
+      {/* <AllProduct /> */}
       {/* <SignUp /> */}
       {/* <SignIn /> */}
       {/* <BestSeller /> */}
