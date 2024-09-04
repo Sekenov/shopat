@@ -12,6 +12,7 @@ import SignIn from './pages/signin/SignIn';
 import SignUp from './pages/signup/SignUp';
 import AddProduct from './pages/addProduct/AddProduct';
 import ProductByCategory from './pages/header/productByCategory/ProductByCategory';
+
 function App() {
   return (
     <Router>
@@ -19,7 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/details" element={<Detail />} />
+          <Route path="/details/:id" element={<Detail />} />
           <Route path="/purchase" element={<Purchase />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/favorit" element={<Favorit />} />
@@ -30,10 +31,8 @@ function App() {
           <Route path="/addproduct" element={<AddProduct />}/>
           <Route path="/products/:id" element={<ProductByCategory />}/>
         </Routes>
-        
       </div>
     </Router>
-
   );
 }
 

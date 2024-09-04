@@ -1,71 +1,100 @@
-import React from 'react'
-import "./detail.css"
-import backButton from "./img/backButton.svg"
-import cart from './img/Cart.svg'
-import nike from './img/nike.png'
-import nike1 from './img/nikeGallery.png'
-import nike2 from './img/nikeGallery2.png'
-import nike3 from './img/nikeGallery3.png'
-import { useNavigate } from 'react-router-dom'
-export default function Detail() {
-    const navigate = useNavigate();
+import React, { useEffect, useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import "./detail.css";
+import backButton from "./img/backButton.svg";
+import cart from './img/Cart.svg';
+// Ваши другие импорты
 
-    const AddToCart = () => {
-      navigate('/cart');
+export default function Detail() {
+  const { id } = useParams(); // Получаем ID продукта из URL
+  const [product, setProduct] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchProduct = async () => {
+      try {
+        const res = await axios.get(`${process.env.REACT_APP_API_URL}/products/${id}?populate=*`, {
+          headers: {
+            Authorization: `Bearer ${process.env.REACT_APP_API_TOKEN}`,
+          },
+        });
+        setProduct(res.data.data);
+      } catch (err) {
+        setError(err);
+      } finally {
+        setLoading(false);
+      }
     };
+
+    fetchProduct();
+  }, [id]); // Запрос при изменении ID
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error loading product.</p>;
+  if (!product) return <p>Product not found.</p>;
+
+  const AddToCart = () => {
+    navigate('/cart');
+  };
+
+  const handleBackClick = () => {
+    navigate(-1);
+  };
   return (
     <>
-    <div className='mainBlock'>
+      <div className='mainBlock'>
         <div className='header-details'>
-            <div className='but1'><img src={backButton} alt="" /></div>
-            <div className='but2'>Men's Shoes</div>
-            <div className='but3'><img src={cart} alt="" /></div>
+          <div className='but1' onClick={handleBackClick}><img src={backButton} alt="Back" /></div>
+          <div className='but2'>{product.attributes.category}</div>
+          <div className='but3'><img src={cart} alt="Cart" /></div>
         </div>
 
         <div className='photo-details'>
-            <img src={nike} alt="" />
+          <img src={`${process.env.REACT_APP_UPLOAD_URL}${product.attributes.img?.data?.[0]?.attributes?.url}`} alt={product.attributes.title} />
         </div>
-
 
         <div className='detail-details'>
-            <div className='text-details'>
-                <div className='title-details'>
-                    <h3 className='bestSeller'>BEST SELLER</h3>
-                    <h2 className='title'>NIKE AIR MAX 270</h2>
-                </div>
-                <p className='price'>$ 200</p>
-                <p className='about'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <div className='text-details'>
+            <div className='title-details'>
+              <h3 className='bestSeller'>{product.attributes.isBest ? 'BEST SELLER' : ''}</h3>
+              <h2 className='title'>{product.attributes.title}</h2>
+            </div>
+            <p className='price'>${product.attributes.price}</p>
+            <p className='about'>{product.attributes.description}</p>
+          </div>
 
-            </div>
-            <div className='gallery-details'>
-                <h2 className='gallery-text'>Gallery</h2>
-                <div className='gallery-type'>
-                    <div className='gallery-box'><img src={nike1} alt="" /></div>
-                    <div className='gallery-box'><img src={nike2} alt="" /></div>
-                    <div className='gallery-box'><img src={nike3} alt="" /></div>
+          <div className='gallery-details'>
+            <h2 className='gallery-text'>Gallery</h2>
+            <div className='gallery-type'>
+              {product.attributes.img?.data?.map((imgItem, index) => (
+                <div className='gallery-box' key={index}>
+                  <img src={`${process.env.REACT_APP_UPLOAD_URL}${imgItem.attributes.url}`} alt={`Gallery image ${index + 1}`} />
                 </div>
+              ))}
             </div>
+          </div>
 
-            <div className='size-details'>
-                <h2 className='size-text'>Size</h2>
-                <div className='size-type'>
-                    <div className='size-box'>39</div>
-                    <div className='size-box'>40</div>
-                    <div className='size-box'>41</div>
-                    <div className='size-box'>42</div>
-                    <div className='size-box'>43</div>
-                </div>
+          <div className='size-details'>
+            <h2 className='size-text'>Size</h2>
+            <div className='size-type'>
+              {product.attributes.sizes?.map((size, index) => (
+                <div className='size-box' key={index}>{size}</div>
+              )) || <p>No sizes available</p>}
             </div>
+          </div>
 
-            <div className="accept-details">
-                <div className="price-details">
-                    <p className="price-text">Price</p>
-                    <p className='price-amount'>$ 25000</p>
-                </div>
-                <button className="accept-button" onClick={AddToCart}>Add To Cart</button>
+          <div className="accept-details">
+            <div className="price-details">
+              <p className="price-text">Price</p>
+              <p className='price-amount'>${product.attributes.price}</p>
             </div>
+            <button className="accept-button" onClick={AddToCart}>Add To Cart</button>
+          </div>
         </div>
-    </div>
+      </div>
     </>
-  )
+  );
 }
