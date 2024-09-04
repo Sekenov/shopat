@@ -8,11 +8,14 @@
   }
   
   .SeePopular_card  .Popular_image{
-    
+    overflow: hidden;
+    padding: 9px;
   }
   .SeePopular_card  .Popular_image img {
     width: 100%;
+    height: 100%;
     border-radius: 8px;
+    object-fit: cover;
   }
   .SeePopular_card  .padd{
     padding-left: 12px;
@@ -39,7 +42,7 @@
   
   .buy {
     padding-top: 12px;
-    
+    align-items: center;
     display: flex;
     text-align: center;
     justify-content: space-between;

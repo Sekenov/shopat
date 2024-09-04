@@ -3,15 +3,24 @@
 .wrapcart .Popular_card {
   flex-direction: column;
   align-items: center;
-  padding: 12px 0px 0px 12px;
+  padding: 9px;
   border-radius: 16px;
   background: #fff;
-}
+  text-decoration: none;
 
+}
+.wrapcart .Popular_card a{
+  text-decoration: none;
+}
+.wrapcart .Popular_card .Popular_image{
+  overflow: hidden;
+  
+}
 .wrapcart .Popular_card .Popular_image .Popular_img {
   width: 100%;
   border-radius: 8px;
-  min-height: 90px;
+  min-height: 100%;
+  object-fit: cover;
 }
 
 .wrapcart .Popular_card .Popular_text .new {
@@ -22,6 +31,7 @@
   font-weight: 400;
   line-height: 16px;
   text-transform: uppercase;
+  
 }
 
 
@@ -34,6 +44,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
+  text-decoration: none;
 }
 
 
@@ -41,6 +52,7 @@
   padding-top: 12px;
   display: flex;
   text-align: center;
+  gap: 10px;
   justify-content: space-between;
 }
 
