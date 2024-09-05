@@ -8,6 +8,7 @@
 .mainBlock {
   width: 375px;
   background: #f8f9fa;
+  margin-bottom: 50px;
   /* font-family: 'Adamina'; */
 }
 .header-details {
@@ -54,6 +55,7 @@
   overflow: hidden;
   width: 100%; /* Задаем ширину карточки */
   max-width: 375px;
+  height: 195px;
   padding: 15px;
   display: flex;
   justify-content: center;
@@ -61,8 +63,9 @@
 .photo-details img {
   border-radius: 8px;
   width: 100%; /* Изображение занимает всю ширину карточки */
-  height: auto;
-  object-fit: cover;
+  /* height: auto; */
+  /* object-fit: cover; */
+  
 }
 
 /*  */
@@ -135,6 +138,7 @@
   width: 100%; /* Изображение занимает всю ширину box */
   height: 100%; /* Изображение занимает всю высоту box */
   object-fit: cover;
+  
 }
 .size-details{
   margin-top: 16px;
@@ -164,7 +168,7 @@
 /*  */
 .accept-details{
   display: flex;
-  gap: 89px;
+  justify-content: space-between;
 }
 .accept-details .price-details{
   display: flex;
