@@ -9,14 +9,14 @@
   width: 375px;
   background: #f8f9fa;
   margin-bottom: 50px;
-  /* font-family: 'Adamina'; */
+ 
 }
 .header-details {
   padding: 20px 20px 0 20px;
   display: flex;
-  /* padding-top: 52px; */
+ 
   align-items: center;
-  /* justify-content: center; */
+ 
   gap: 128px;
 }
 .header-details .but1 {
@@ -49,11 +49,11 @@
   object-fit: cover;
 }
 
-/*  */
+
 
 .photo-details {
   overflow: hidden;
-  width: 100%; /* Задаем ширину карточки */
+  width: 100%;
   max-width: 375px;
   height: 195px;
   padding: 15px;
@@ -62,13 +62,13 @@
 }
 .photo-details img {
   border-radius: 8px;
-  width: 100%; /* Изображение занимает всю ширину карточки */
-  /* height: auto; */
-  /* object-fit: cover; */
+  width: 100%;
+ 
+ 
   
 }
 
-/*  */
+
 
 .detail-details {
   border-top-left-radius: 24px;
@@ -107,7 +107,7 @@
     margin-bottom: 16px;
 }
 
-/*  */
+
 
 .gallery-details{
     display: flex;
@@ -128,15 +128,15 @@
     height: 56px;
     background-color: #F8F9FA;
     border-radius: 16px;
-    overflow: hidden; /* Скрываем содержимое, которое выходит за пределы блока */
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     
 }
 .gallery-details .gallery-type .gallery-box img{
-  width: 100%; /* Изображение занимает всю ширину box */
-  height: 100%; /* Изображение занимает всю высоту box */
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   
 }
@@ -165,7 +165,7 @@
     justify-content: center;
     color: #707B81;
 }
-/*  */
+
 .accept-details{
   display: flex;
   justify-content: space-between;
@@ -192,3 +192,93 @@
   border-radius: 16px;
   color: #ffffff;
 }
+
+
+
+
+
+
+
+
+
+.Modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+ 
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(77, 76, 76, 0.603);
+  z-index: 999;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 375px;
+  height: 100%;
+  padding: 10px;
+}
+
+.modal-image {
+  /* max-width: 100%; */
+  height: 100%; 
+  padding: 15px;
+  object-fit: contain; 
+  width: 375px;
+}
+
+.modal-controls {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+  
+  
+}.modal-controls .prev-button{
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;width: 44px;height: 44px;
+  
+}
+.modal-controls .next-button{
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;height: 44px;
+  
+}
+.modal-controls .next-button img{
+  rotate: 180deg;
+}
+.prev-button, .next-button, .close-button {
+  width: 44px;height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.3s ease;color: rgb(0, 0, 0);
+}
+
+
+
+.close-button {
+  align-self: flex-end;
+  margin-bottom: 10px;
+}
+
