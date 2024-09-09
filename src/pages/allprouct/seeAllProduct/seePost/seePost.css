@@ -12,6 +12,7 @@
   .SeePopular_card  .Popular_image{
     overflow: hidden;
     max-width: 160px;
+    /* height: 100px; */
   }
   .SeePopular_card  .Popular_image img {
     width: 100%;
