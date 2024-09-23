@@ -19,7 +19,7 @@ export default function BrandPost({ brandId }) {
         });
         setData(res.data.data);
       } catch (err) {
-        setError(err);
+        setError(err.message); // сохраняем сообщение об ошибке
       } finally {
         setLoading(false);
       }
@@ -28,12 +28,30 @@ export default function BrandPost({ brandId }) {
     fetchData();
   }, [brandId]);
 
+  // Индикатор загрузки
+  const renderLoading = () => (
+    <div className="loading-square center-content">
+      <i className="fas fa-spinner"></i>
+      <p>Loading..</p>
+    </div>
+  );
+
+  // Квадрат для ошибки
+  const renderError = () => (
+    <div className="error-square center-content">
+      <i className="fas fa-exclamation-triangle"></i>
+      <p>{error || 'An error occurred while loading products.'}</p>
+    </div>
+  );
+
   return (
     <div className="wrapcart">
-      {loading ? <p>Loading...</p> : error ? <p>Error loading products.</p> : data.length > 0 ? (
-        data.map((item) => (
-          <SeePost item={item} key={item.id} />
-        ))
+      {loading ? (
+        renderLoading()
+      ) : error ? (
+        renderError()
+      ) : data.length > 0 ? (
+        data.map((item) => <SeePost item={item} key={item.id} />)
       ) : (
         <p>No products found.</p>
       )}

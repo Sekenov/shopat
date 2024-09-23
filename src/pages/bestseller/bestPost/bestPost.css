@@ -16,7 +16,7 @@
   }
   .best_card .best_image .best_img {
     width: 100%; /* Изображение занимает всю ширину карточки */
-    height: auto;
+    height: 120px;
     object-fit: cover;
     border-radius: 8px;
   }
@@ -38,6 +38,14 @@
     font-style: normal;
     font-weight: 400;
     line-height: 20px;
+
+
+    /* Ограничение количества строк */
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* Число отображаемых строк */
+    -webkit-box-orient: vertical; /* Вертикальное выравнивание */
+    overflow: hidden; /* Обрезаем все, что не помещается в область */
+    text-overflow: ellipsis; /* Добавляем многоточие */
   }
   
   .best_card .best_buy {

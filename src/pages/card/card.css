@@ -1,6 +1,6 @@
 
 
-.wrapcart .Popular_card {
+ .Popular_card{
   
   align-items: center;
   padding: 9px;
@@ -10,28 +10,29 @@
   
 
 }
-.wrapcart .Popular_card a{
+.Popular_card a{
   text-decoration: none;
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-.wrapcart .Popular_card .Popular_image{
+.Popular_card .Popular_image{
   overflow: hidden;
   width: 100%; /* Задаем ширину карточки */
   max-width: 160px;
-  
+  display: flex;
+  flex-wrap: wrap;
   
 }
-.wrapcart .Popular_card .Popular_image .Popular_img {
+.Popular_card .Popular_image .Popular_img {
   
   border-radius: 8px;
   width: 100%; /* Изображение занимает всю ширину карточки */
-  height: auto;
+  height: 120px;
   object-fit: cover;
 }
 
-.wrapcart .Popular_card .Popular_text .new {
+.Popular_card .Popular_text .new {
   color: #5b9ee1;
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
@@ -45,7 +46,7 @@
 
 
 
-.wrapcart .Popular_card .Popular_text .Popular_title {
+.Popular_card .Popular_text .Popular_title {
   color: #1a2530;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
@@ -53,10 +54,17 @@
   font-weight: 400;
   line-height: 20px;
   text-decoration: none;
+
+  /* Ограничение количества строк */
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* Число отображаемых строк */
+  -webkit-box-orient: vertical; /* Вертикальное выравнивание */
+  overflow: hidden; /* Обрезаем все, что не помещается в область */
+  text-overflow: ellipsis; /* Добавляем многоточие */
 }
 
 
-.wrapcart .Popular_card .buy {
+.Popular_card .buy {
   padding-top: 12px;
   display: flex;
   text-align: center;
@@ -64,7 +72,7 @@
   justify-content: space-between;
 }
 
-.wrapcart .Popular_card .buy .Popular_price {
+.Popular_card .buy .Popular_price {
   color: #1a2530;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
@@ -75,7 +83,7 @@
 
 
 
-.wrapcart .Popular_card .buy .add-to-cart {
+.Popular_card .buy .add-to-cart {
   background-color: #4a90e2;
   color: #fff;
   border: none;

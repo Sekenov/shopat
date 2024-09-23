@@ -25,6 +25,7 @@ gap: 10px;
 padding-top: 15px;
 align-items: flex-start;
 justify-content: space-evenly;
+
 }
 .Popular .PopularText .bestPopular {
   color: #1a2530;
@@ -89,3 +90,46 @@ justify-content: space-evenly;
 
 
   
+
+
+
+
+  /* post.css */
+/* post.css */
+
+.loading-square,
+.error-square {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Центрирование */
+  text-align: center;
+}
+
+.loading-square i {
+  font-size: 50px;
+  color: #4a90e2; /* Цвет для иконки загрузки */
+  animation: spin 1.5s linear infinite; /* Анимация вращения */
+}
+
+.error-square i {
+  font-size: 50px;
+  color: red; /* Цвет для иконки ошибки */
+}
+
+.loading-square p,
+.error-square p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Анимация вращения */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

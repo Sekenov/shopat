@@ -30,7 +30,7 @@ export default function Detail() {
         });
         setProduct(res.data.data);
       } catch (err) {
-        setError(err);
+        setError(err.message);
       } finally {
         setLoading(false);
       }
@@ -39,9 +39,19 @@ export default function Detail() {
     fetchProduct();
   }, [id]);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error loading product.</p>;
-  if (!product) return <p>Product not found.</p>;
+  const renderLoading = () => (
+    <div className="loading-square center-content">
+      <i className="fas fa-spinner"></i>
+      <p>Loading..</p>
+    </div>
+  );
+
+  const renderError = () => (
+    <div className="error-square center-content">
+      <i className="fas fa-exclamation-triangle"></i>
+      <p>{error || 'An error occurred while loading product.'}</p>
+    </div>
+  );
 
   const AddToCart = () => {
     navigate('/cart');
@@ -73,6 +83,13 @@ export default function Detail() {
       (prevIndex - 1 + product.attributes.img?.data?.length) % product.attributes.img?.data?.length
     );
   };
+
+  // Проверяем состояния загрузки или ошибки
+  if (loading) return renderLoading();
+  if (error) return renderError();
+
+  // Проверка на наличие продукта
+  if (!product) return <p>Product not found.</p>;
 
   return (
     <>

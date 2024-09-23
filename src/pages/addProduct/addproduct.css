@@ -1,8 +1,9 @@
 .blockAllProduct{
-    padding: 20px;
-    width: 375px;
-    height: 750px;
-    background: #f8f9fa;
+  max-width: 375px;
+  min-height: 100vh;
+  margin: auto;
+  background: #F8F9FA;
+  padding: 30px 20px; 
 }
 .blockAllProduct .header-product{
     display: flex;
@@ -152,18 +153,12 @@
 
 
 
-  .blockAllProduct .AddProduct-inputBlock  .checkout-button{
-    /* padding: 0 20px; */
-    
-}
+
 .blockAllProduct .AddProduct-inputBlock  .checkout-button .button-submit{
-    width: 335px;
+    
     padding: 16px 126px;
     border-radius: 50px;
     border: none;
     background-color: #5B9EE1;
     color: white;
 }  
-.blockAllProduct .AddProduct-inputBlock  .checkout-button .button-submit Link{
-    color: white;
-}
