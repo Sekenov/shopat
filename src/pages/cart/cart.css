@@ -7,9 +7,9 @@
     font-family: "Montserrat", sans-serif;
   }
 .mainBlockCart {
-    width: 375px;
-    max-width: 375px; /* Максимальная ширина для мобильных устройств */
-    height: 100vh; /* Высота блока равна 100% высоты видимого экрана */
+    max-width: 375px;
+     /* Максимальная ширина для мобильных устройств */
+    min-height: 100vh; /* Высота блока равна 100% высоты видимого экрана */
     background: #f8f9fa;
     padding: 20px;
     display: flex;
@@ -17,7 +17,7 @@
     
   }
   .mainBlockCart .cart{
-    margin-top: 60px; /* Отступ сверху, чтобы не перекрывать фиксированный заголовок */
+    margin-top: 40px; /* Отступ сверху, чтобы не перекрывать фиксированный заголовок */
     margin-bottom: 260px; /* Отступ снизу, чтобы не перекрывать фиксированный футер */
     flex-grow: 1; /* Занимает оставшееся пространство */
     overflow-y: auto; /* Включаем вертикальную прокрутку */
@@ -27,17 +27,11 @@
 
 }
  .header-cart{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #f8f9fa;
-    padding: 20px;
     display: flex;
+   
     align-items: center;
+   
     justify-content: space-between;
-    z-index: 1000;
-
 }
  .header-cart .but2{
     color: #1A2530;
@@ -50,7 +44,7 @@
     /* margin-top: 70px; */
     display: flex;
     align-items: center;
-    gap: 85px;
+    justify-content: space-between;
     margin-bottom: 20px;
 }
 .mainBlockCart .cart .cart-order .img-order{
@@ -136,85 +130,105 @@ width: 100%; /* Изображение занимает всю ширину box 
   object-fit: cover;
 }
 /*  */
-
-.check-order{
+.check-order {
     position: fixed;
+    width: 100%;
+    max-width: 375px;
     bottom: 0;
     border-top-right-radius: 24px;
     border-top-left-radius: 24px;
     background-color: #fff;
-    width: 375px;
-
+    z-index: 10; /* Убедимся, что блок остается над слайдером */
 }
-.check-order .padding-order{
+
+.check-order .padding-order {
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
-.check-order .padding-order .price-order{
+
+.check-order .padding-order .price-order,
+.check-order .padding-order .sale-order,
+.check-order .padding-order .total-cost {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.check-order .padding-order .sale-order{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.check-order .padding-order .price-order .name-price{
+
+.check-order .padding-order .price-order .name-price,
+.check-order .padding-order .sale-order .sale-name,
+.check-order .padding-order .total-cost .cost-name {
     color: #707B81;
     font-size: 16px;
 }
-.check-order .padding-order .price-order .price-price{
+
+.check-order .padding-order .price-order .price-price,
+.check-order .padding-order .sale-order .sale-price,
+.check-order .padding-order .total-cost .cost-price {
     color: #1A2530;
     font-size: 18px;
 }
-.check-order .padding-order .sale-order .sale-name{
-    color: #707B81;
-    font-size: 16px;
-}
-.check-order .padding-order .sale-order .sale-price{
-    color: #1A2530;
-    font-size: 18px;
-}
-/*  */
-.line-line{
+
+.check-order .line-line {
     padding: 0 20px;
 }
-.line-line .line{
-    border-top: 1px dashed #CCCCCC; /* можно настроить толщину линии и цвет */
-    width: 100%; /* установить ширину линии */
-    /* margin: 20px 0; */
+
+.check-order .line-line .line {
+    border-top: 1px dashed #CCCCCC;
 }
-/*  */
-.check-order .padding-order .total-cost{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.check-order .padding-order .total-cost .cost-name{
+
+.check-order .padding-order .total-cost .cost-name {
     font-size: 16px;
     color: #1A2530;
     font-weight: 500;
 }
-.check-order .padding-order .total-cost .cost-price{
+
+.check-order .padding-order .total-cost .cost-price {
     color: #1A2530;
     font-size: 20px;
     font-weight: 500;
 }
-.check-order .checkout-button{
+
+.check-order .checkout-button {
     padding: 0 20px;
     margin-bottom: 70px;
+    max-width: 375px;
 }
-.check-order .checkout-button .button-submit{
-    width: 335px;
-    padding: 16px 126px;
+
+.check-order .checkout-button .button-submit {
+    width: 100%;
+    padding: 16px 0;
     border-radius: 50px;
     border: none;
     background-color: #5B9EE1;
     color: white;
-}  
-.check-order .checkout-button .button-submit Link{
+    text-align: center;
+}
+
+.check-order .checkout-button .button-submit Link {
     color: white;
+}
+
+/* Адаптивность для экранов 375px и меньше */
+@media (max-width: 375px) {
+    .check-order {
+        width: 100%;
+        max-width: 375px;
+    }
+
+    .check-order .checkout-button .button-submit {
+        padding: 16px 0;
+    }
+}
+
+/* Адаптивность для экранов 320px и меньше */
+@media (max-width: 320px) {
+    .check-order {
+        max-width: 320px;
+    }
+
+    .check-order .checkout-button .button-submit {
+        padding: 14px 0;
+    }
 }

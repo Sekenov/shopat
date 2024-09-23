@@ -9,7 +9,7 @@
 
 
 .Best_wrap {
-    min-width: 375px;
+    /* min-width: 375px; */
     height: 100vh;
     margin: auto;
     background: #F8F9FA;
@@ -86,9 +86,11 @@ header {
   
   .bestcart {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 колонки с равной шириной */
-    gap: 20px; /* Расстояние между карточками */
-    padding-top: 15px;
+  grid-template-columns: repeat(2, 1fr); 
+gap: 10px; 
+padding-top: 15px;
+align-items: flex-start;
+justify-content: space-evenly;
     
   }
   

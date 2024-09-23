@@ -20,18 +20,18 @@ export default function Cart() {
     navigate(-1); 
   };
   return (
-    <><div className="header-cart">
+    <>
+      <div className="mainBlockCart"><div className="header-cart">
           <div className="but1" onClick={handleBackClick}>
             <img src={backButton} alt="" />
           </div>
           <div className="but2">My Cart</div>
           <div className="but3"></div>
         </div>
-      <div className="mainBlockCart">
         
 
         <div className="cart">
-          <div className="cart-order">
+        <div className="cart-order">
             <div className="cart-gap">
               <div className="img-order">
                 <img src={nikeCart} alt="" />
@@ -56,8 +56,7 @@ export default function Cart() {
                 <img src={trash} alt="" />
               </div>
             </div>
-          </div>
-          <div className="cart-order">
+          </div><div className="cart-order">
             <div className="cart-gap">
               <div className="img-order">
                 <img src={nikeCart} alt="" />
@@ -82,8 +81,7 @@ export default function Cart() {
                 <img src={trash} alt="" />
               </div>
             </div>
-          </div>
-          <div className="cart-order">
+          </div><div className="cart-order">
             <div className="cart-gap">
               <div className="img-order">
                 <img src={nikeCart} alt="" />
@@ -108,8 +106,7 @@ export default function Cart() {
                 <img src={trash} alt="" />
               </div>
             </div>
-          </div>
-          <div className="cart-order">
+          </div><div className="cart-order">
             <div className="cart-gap">
               <div className="img-order">
                 <img src={nikeCart} alt="" />
@@ -134,8 +131,7 @@ export default function Cart() {
                 <img src={trash} alt="" />
               </div>
             </div>
-          </div>
-          <div className="cart-order">
+          </div><div className="cart-order">
             <div className="cart-gap">
               <div className="img-order">
                 <img src={nikeCart} alt="" />
@@ -160,112 +156,7 @@ export default function Cart() {
                 <img src={trash} alt="" />
               </div>
             </div>
-          </div>
-          <div className="cart-order">
-            <div className="cart-gap">
-              <div className="img-order">
-                <img src={nikeCart} alt="" />
-              </div>
-
-              <div className="about-order">
-                <div className="gap-order">
-                  <p className="name-about">Nike CLub max</p>
-                  <p className="price-about">$ 550</p>
-                </div>
-                <div className="amount-order">
-                  <div className="minus-amount">-</div>
-                  <p className="amount-amount">1</p>
-                  <div className="plus-amount">+</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="action-order">
-              <p className="size-action">L</p>
-              <div className="delete-action">
-                <img src={trash} alt="" />
-              </div>
-            </div>
-          </div>
-          <div className="cart-order">
-            <div className="cart-gap">
-              <div className="img-order">
-                <img src={nikeCart} alt="" />
-              </div>
-
-              <div className="about-order">
-                <div className="gap-order">
-                  <p className="name-about">Nike CLub max</p>
-                  <p className="price-about">$ 550</p>
-                </div>
-                <div className="amount-order">
-                  <div className="minus-amount">-</div>
-                  <p className="amount-amount">1</p>
-                  <div className="plus-amount">+</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="action-order">
-              <p className="size-action">L</p>
-              <div className="delete-action">
-                <img src={trash} alt="" />
-              </div>
-            </div>
-          </div>
-          <div className="cart-order">
-            <div className="cart-gap">
-              <div className="img-order">
-                <img src={nikeCart} alt="" />
-              </div>
-
-              <div className="about-order">
-                <div className="gap-order">
-                  <p className="name-about">Nike CLub max</p>
-                  <p className="price-about">$ 550</p>
-                </div>
-                <div className="amount-order">
-                  <div className="minus-amount">-</div>
-                  <p className="amount-amount">1</p>
-                  <div className="plus-amount">+</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="action-order">
-              <p className="size-action">L</p>
-              <div className="delete-action">
-                <img src={trash} alt="" />
-              </div>
-            </div>
-          </div>
-          <div className="cart-order">
-            <div className="cart-gap">
-              <div className="img-order">
-                <img src={nikeCart} alt="" />
-              </div>
-
-              <div className="about-order">
-                <div className="gap-order">
-                  <p className="name-about">Nike CLub max</p>
-                  <p className="price-about">$ 550</p>
-                </div>
-                <div className="amount-order">
-                  <div className="minus-amount">-</div>
-                  <p className="amount-amount">1</p>
-                  <div className="plus-amount">+</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="action-order">
-              <p className="size-action">L</p>
-              <div className="delete-action">
-                <img src={trash} alt="" />
-              </div>
-            </div>
-          </div>
-          <div className="cart-order">
+          </div><div className="cart-order">
             <div className="cart-gap">
               <div className="img-order">
                 <img src={nikeCart} alt="" />
@@ -293,6 +184,9 @@ export default function Cart() {
           </div>
         </div>
       </div>
+
+
+      
       <div className="check-order">
         <div className="padding-order">
           <div className="price-order">
@@ -303,8 +197,7 @@ export default function Cart() {
             <p className="sale-name">Shopping</p>
             <p className="sale-price">$265</p>
           </div>
-        </div>
-        <div className="line-line">
+        </div><div className="line-line">
           <div className="line"></div>
         </div>
         <div className="padding-order">
@@ -313,6 +206,7 @@ export default function Cart() {
             <p className="cost-price">$856</p>
           </div>
         </div>
+        
 
         <div className="checkout-button">
             <button onClick={handleCheckout} className="button-submit">

@@ -6,7 +6,7 @@
   font-family: "Montserrat", sans-serif;
 }
 .mainBlock {
-  width: 375px;
+  max-width: 375px;
   background: #f8f9fa;
   margin-bottom: 50px;
  
@@ -17,7 +17,7 @@
  
   align-items: center;
  
-  gap: 128px;
+  justify-content: space-between;
 }
 .header-details .but1 {
   background: #ffffff;
