@@ -13,6 +13,7 @@ import SignUp from './pages/signup/SignUp';
 import AddProduct from './pages/addProduct/AddProduct';
 import ProductByCategory from './pages/header/productByCategory/ProductByCategory';
 import Footer from './pages/footer/Footer';
+import Search from './pages/search/Search';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path="/addproduct" element={<AddProduct />} />
           <Route path="/products/:id" element={<ProductByCategory />} />
           <Route path="/brand/:brandId" element={<MainPage />} /> {/* Маршрут для брендов */}
+          <Route path="/search" element={<Search />}/>
         </Routes>
         <Footer />
       </div>

@@ -24,7 +24,7 @@ export default function Header() {
             <span className="circle"></span>
           </div>
 
-          <form className="form">
+          <Link to={"/search"} className="form">
             <button></button>
             <input
               className="input"
@@ -32,7 +32,7 @@ export default function Header() {
               required=""
               type="text"
             />
-          </form>
+          </Link>
           <Link to="/cart">
             <div className="headcor">
               <span className="corzin"></span>
