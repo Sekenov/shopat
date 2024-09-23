@@ -1,12 +1,14 @@
 
 
-import Search from "./pages/search/Search";
+ import Acset from "./pages/acset/Acset";
 
 
 function App() {
   return (
     <div className="App">
-      <Search />
+      <Acset />
+      {/* <Notifications /> */}
+      {/* <Search /> */}
       {/* <AllProduct /> */}
       {/* <SignUp /> */}
       {/* <SignIn /> */}

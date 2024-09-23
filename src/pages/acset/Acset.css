@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+.acset_wrap {
+    max-width: 375px;
+    min-height: 100vh;
+    margin: auto;
+    background: #F8F9FA;
+    padding: 30px 20px; 
+}
+
+
+/* Header */
+.acset_wrap .head_acset {
+    margin: 0; 
+}
+
+/* Обертка для header */
+.acset_wrap .head_acset .wrapperacset {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.acset_wrap .head_acset .wrapperacset .pusto {
+    width: 44px;
+}
+
+/* Стили для headbut и headcor */
+.acset_wrap .head_acset .wrapperacset .acsetbut {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 40px;
+    background: #FFF;
+}
+
+/* Стили для круга в headbut */
+.acset_wrap .head_acset .wrapperacset .acsetbut {
+    padding: 15px;
+    gap: 14px;
+}
+
+.acset_wrap .head_acset .wrapperacset .acsetbut .acset_circle {
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+
+.acset_wrap .head_acset .wrapperacset .acset_text .accounth1 {
+    color: #1A2530;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.acset_wrap .head_acset .wrapperacset .pusto {
+    width: 44px;
+}
+
+/* Конец header */
+
+/* section account */
+
+
+.acset_wrap .sectionAcset {
+    margin-top: 25px;
+}
+
+.acset_wrap .sectionAcset .sect_title_txt {
+    margin-bottom: 25px;
+}
+
+.acset_wrap .sectionAcset .sect_title_txt .title_txt {
+    color: #1A2530;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+
+
+.acset_wrap .sectionAcset .accauntwrapset .notifiset {
+    display: flex;
+    height: 40px;
+    justify-content: space-between;
+    text-align: center;
+    align-items: start;
+    border-bottom: 1px solid #E9EDEF ;
+    cursor: pointer;
+    margin-bottom: 18px;
+}
+
+.acset_wrap .sectionAcset .accauntwrapset .notifiset .notifiset_img {
+    display: flex;
+    gap: 16px;
+}
+
+.acset_wrap .sectionAcset .accauntwrapset .notifiset .notifiset_img .notification_img {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.acset_wrap .sectionAcset .accauntwrapset .notifiset .notification_title_txt .notification_txt {
+    color: #1A2530;
+    font-family: "Montserrat", sans-serif;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.acset_wrap .sectionAcset .accauntwrapset .notifiset .notifarow .notifarow_img {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+/* end */
+
+/* main start */
+
+
+.acset_wrap .mainacset {
+    margin-top: 25px;
+}
+
+.acset_wrap .mainacset .main_title_txt {
+    margin-bottom: 25px;
+}
+
+.acset_wrap .mainacset .main_title_txt .ac_title_txt {
+    color: #1A2530;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+
+
+.acset_wrap .mainacset .mainwrapset .app_set {
+    display: flex;
+    height: 40px;
+    justify-content: space-between;
+    text-align: center;
+    align-items: start;
+    border-bottom: 1px solid #E9EDEF ;
+
+    margin-bottom: 18px;
+}
+
+.acset_wrap .mainacset .mainwrapset .app_set .set_notifiset_img {
+    display: flex;
+    gap: 16px;
+}
+
+.acset_wrap .mainacset .mainwrapset .app_set .set_notifiset_img .notifi_img {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.acset_wrap .mainacset .mainwrapset .app_set .app_title_txt .app_txt {
+    color: #1A2530;
+    font-family: "Montserrat", sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+
+/* main end */
