@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import './search.css';
 import arrow from '../../img/fovorit/Arrow.png';
 import search from './img/search.svg';
+import SeePost from '../allprouct/seeAllProduct/seePost/SeePost'; // Импортируем SeePost
 
 export default function Search() {
   const location = useLocation();
@@ -107,15 +108,13 @@ export default function Search() {
             ) : error ? (
               renderError() // Показать ошибку
             ) : products.length > 0 ? (
-              products.map((product) => (
-                <div key={product.id} >
-                  <h2>{product.attributes.title}</h2>
-                  <p>{product.attributes.description}</p>
-                  <p>Price: ${product.attributes.price}</p>
-                </div>
+              products.map((item) => (
+                <>
+                {/* <div className='Search_wrapcart'> */}
+                <SeePost item={item} key={item.id} /> </>
               ))
             ) : (
-              <p>К сожалению нету таких товаров</p> // Сообщение, если продуктов нет
+              <p>No products found.</p> // Сообщение, если продуктов нет
             )}
           </div>
         </div>
