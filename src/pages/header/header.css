@@ -20,7 +20,18 @@ header {
     align-items: center;
     justify-content: space-between;
 }
-
+.wrapper .formHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 206px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 0.8em;
+    border-radius: 20px;
+    background: #fff;
+}
 /* Стили для headbut и headcor */
 .headbut, .headcor {
     display: flex;

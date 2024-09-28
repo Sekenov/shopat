@@ -29,7 +29,7 @@ export default function Header({ onBrandSelect, onSearchSubmit, setSearchQuery }
             <span className="circle"></span>
           </div>
 
-          <form onSubmit={onSearchSubmit}>
+          <form onSubmit={onSearchSubmit} className="formHeader">
             <button type="submit"></button>
             <input
               className="input"

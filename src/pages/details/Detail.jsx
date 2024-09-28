@@ -39,6 +39,7 @@ export default function Detail() {
     fetchProduct();
   }, [id]);
 
+  // Функция для отображения загрузки
   const renderLoading = () => (
     <div className="loading-square center-content">
       <i className="fas fa-spinner"></i>
@@ -46,6 +47,7 @@ export default function Detail() {
     </div>
   );
 
+  // Функция для отображения ошибки
   const renderError = () => (
     <div className="error-square center-content">
       <i className="fas fa-exclamation-triangle"></i>
