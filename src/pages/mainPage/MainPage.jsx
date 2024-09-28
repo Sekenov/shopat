@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import "./MainPage.css";
-
-import { Link, useNavigate, useParams } from "react-router-dom";
-
+import { useNavigate, useParams } from "react-router-dom";
 import BrandPost from "../posts/BrandPost";
 import Header from "../header/Header";
 import Post from "../posts/Post";
@@ -10,29 +8,33 @@ import Footer from "../footer/Footer";
 
 function MainPage() {
   const [selectedBrand, setSelectedBrand] = useState(null);
-  const [searchQuery, setSearchQuery] = useState(""); // Состояние для поискового запроса
+  const [searchQuery, setSearchQuery] = useState("");
   const { brandId } = useParams();
   const navigate = useNavigate();
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
-    navigate(`/search?query=${searchQuery}`);
+    if (searchQuery.trim()) {
+      navigate(`/search?query=${searchQuery}`); // Перенаправляем на страницу поиска
+    }
   };
+
   return (
     <>
       <div className="main-page">
-      <Header 
+        <Header 
           onBrandSelect={setSelectedBrand} 
           onSearchSubmit={handleSearchSubmit} 
-          setSearchQuery={setSearchQuery} // Передаем функцию
-        />        {brandId ? (
-          <BrandPost brandId={brandId} /> // Показываем компонент для выбранного бренда
+          setSearchQuery={setSearchQuery} 
+        />
+        
+        {brandId ? (
+          <BrandPost brandId={brandId} />
         ) : (
-          <Post /> // Показываем стандартный Post компонент
+          <Post />
         )}
       </div>
       <Footer selectedBrand={selectedBrand} setSelectedBrand={setSelectedBrand} />
-     
     </>
   );
 }
