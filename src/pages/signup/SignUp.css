@@ -17,7 +17,7 @@
 }
 
 .imgup_arrow {
-    margin: 52px 0px 32px 10px ;
+    margin: 0px 0px 32px 10px ;
     width: 44px;
     height: 44px; 
     display: flex;
@@ -41,7 +41,7 @@
 /* nav style start */
 
 .up_text {
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
 }
 
 .up_text .up_hel {
@@ -106,7 +106,7 @@
   }
   
   .up_ema {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   .up_pas {
@@ -140,7 +140,7 @@
     font-size: 13px;
     font-weight: 400;
     line-height: 16px;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
   }
 
   .up_btn {
@@ -150,7 +150,7 @@
   .up_button_sign {
     width: 100%;
     display: inline-flex;
-    padding: 16px 32px;
+    padding: 14px 32px;
     justify-content: center;
     align-items: flex-start;
     gap: 8px;
@@ -158,10 +158,10 @@
     background:#5B9EE1;
 
     color:  #FFF;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     line-height: 22px; 
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 
     cursor: pointer;
     outline: none;
@@ -171,7 +171,7 @@
   .up_button_google {
     width: 100%;
     display: inline-flex;
-    padding: 15px 32px;
+    padding: 14px 32px;
     justify-content: center;
     align-items: center;
     gap: 8px;
@@ -180,11 +180,12 @@
 
     color: #1A2530;
  
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     line-height: 22px;
     cursor: pointer;
     border: #1A2530;
+    margin-bottom: 20px;
   }
   
 
@@ -196,7 +197,7 @@
     line-height: 16px;
     text-transform: capitalize;
   }
-  .up_free {
+.up-registr .up_btn  a {
     color: #1A2530;
     font-size: 12px;
     font-weight: 500;

@@ -57,11 +57,11 @@ const handleBackClick = () => {
                     <button className="button-google">
                         <img src={google} alt="" />
                          Sign in with google
-                    </button>
+                    </button>            <p className="have">Don’t have an account? <Link to={"/signup"}  className="free">Sign Up for Free</Link></p>
+
             </div>
 
             
-            <p className="have">Don’t have an account? <Link to={"/signup"}  className="free">Sign Up for Free</Link></p>
         </form>
     </div>
   )

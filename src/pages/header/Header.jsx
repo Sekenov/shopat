@@ -8,8 +8,8 @@ export default function Header({ onBrandSelect, onSearchSubmit, setSearchQuery }
   const navigate = useNavigate();
   const { data: categories, loading, error } = useFetch(`/categories?populate=*`);
 
-  if (loading) return <h1>Loading...</h1>;
-  if (error) return <h1>Error loading categories.</h1>;
+  if (loading) return <h1></h1>;
+  if (error) return <h1></h1>;
 
   const displayedCategories = categories?.slice(0, 5);
 

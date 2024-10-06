@@ -2,7 +2,7 @@ import React from 'react'
 import './SignUp.css';
 import arrow from '../../img/fovorit/Arrow.png';
 import gogle from '../../img/signin/Group 108.svg'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function SignUp() {
 
@@ -68,11 +68,11 @@ const handleBackClick = () => {
                     <button className="up_button_google">
                         <img src={gogle} alt="" />
                          Sign in with google
-                    </button>
+                    </button>            <p className="up_have">Don’t have an account? <Link to="/signin" className="up_free">Sign Up for Free</Link></p>
+
             </div>
 
             
-            <p className="up_have">Don’t have an account? <a href="/" className="up_free">Sign Up for Free</a></p>
         </form>
     </div>
   )
