@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Cart from './pages/cart/Cart';
 import Detail from './pages/details/Detail';
@@ -16,25 +16,29 @@ import Footer from './pages/footer/Footer';
 import Search from './pages/search/Search';
 
 function App() {
+  const [user, setUser] = useState(() => {
+    const savedUser = localStorage.getItem('user');
+    return savedUser ? JSON.parse(savedUser) : null;
+});
+
   return (
     <Router>
       <div className="App">
         <Routes>
           <Route path="/" element={<MainPage />} />
-  
           <Route path="/cart" element={<Cart />} />
           <Route path="/details/:id" element={<Detail />} />
           <Route path="/purchase" element={<Purchase />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/profile" element={<Profile user={user} />} /> {/* Передаем user в Profile */}
           <Route path="/favorit" element={<Favorit />} />
           <Route path="/bestseller" element={<BestSeller />} />
           <Route path="/allproduct" element={<AllProduct />} />
-          <Route path="/signIn" element={<SignIn />} />
-          <Route path="/signUp" element={<SignUp />} />
+          <Route path="/signIn" element={<SignIn setUser={setUser}/>} />
+          <Route path="/signUp" element={<SignUp setUser={setUser} />} /> {/* Передаем setUser в SignUp */}
           <Route path="/addproduct" element={<AddProduct />} />
           <Route path="/products/:id" element={<ProductByCategory />} />
-          <Route path="/brand/:brandId" element={<MainPage />} /> {/* Маршрут для брендов */}
-          <Route path="/search" element={<Search />}/>
+          <Route path="/brand/:brandId" element={<MainPage />} />
+          <Route path="/search" element={<Search />} />
         </Routes>
         <Footer />
       </div>

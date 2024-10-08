@@ -209,3 +209,29 @@
 
   
   /* form registr style end */
+
+
+ .Signin .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Убедитесь, что слой сверху */
+}
+
+.Signin .loading-square, .error-square {
+    background: white; /* Белый фон для индикатора и ошибки */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.Signin .error-square {
+    color: red; /* Цвет текста ошибки */
+}

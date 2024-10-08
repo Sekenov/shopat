@@ -4,7 +4,12 @@ import SeePost from './seePost/SeePost';
 
 export default function SeeAllProduct() {
   const [data, setData] = useState([]);
-
+  const renderLoading = () => (
+    <div className="loading-square center-content">
+      <i className="fas fa-spinner"></i>
+      <p>Loading bestsellers...</p>
+    </div>
+  );
   useEffect(() => {
     const fetchData = async () => {
       try {

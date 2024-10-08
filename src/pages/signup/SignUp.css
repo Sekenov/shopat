@@ -8,7 +8,7 @@
 }
 
 
-.Signin {
+.SignUp{
     max-width: 600px;
     min-height: 100vh;
     margin: auto;
@@ -208,3 +208,65 @@
 
   
   /* form registr style end */
+
+
+
+
+  /* Оверлей для затемнения фона */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+  z-index: 10; /* Чтобы оверлей был поверх всего контента */
+}
+
+/* Индикатор загрузки */
+ .loading-square {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11; /* Поверх оверлея */
+  /* color: white; */
+  text-align: center;
+}
+ .loading-square i {
+  font-size: 2rem;
+  animation: spin 1s linear infinite;
+}
+
+/* Анимация вращения */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Сообщение об ошибке */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Убедитесь, что слой сверху */
+}
+
+.loading-square, .error-square {
+  background: white; /* Белый фон для индикатора и ошибки */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.error-square {
+  color: red; /* Цвет текста ошибки */
+}

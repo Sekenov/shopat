@@ -1,57 +1,85 @@
 import React, { useState } from 'react';
 import './SignUp.css';
 import arrow from '../../img/fovorit/Arrow.png';
-import gogle from '../../img/signin/Group 108.svg';
+import google from '../../img/signin/Group 108.svg';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-export default function SignUp() {
-    const navigate = useNavigate();
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        password: ''
-    });
-    const [error, setError] = useState(null);
+const LoadingOverlay = () => (
+    <div className="overlay">
+        <div className="loading-square center-content">
+            <i className="fas fa-spinner fa-spin"></i>
+            <p>Registering...</p>
+        </div>
+    </div>
+);
 
-    // Обработчик клика на кнопку "Back"
+const ErrorOverlay = ({ message, onClose }) => (
+    <div className="overlay" onClick={onClose}>
+        <div className="error-square center-content" onClick={(e) => e.stopPropagation()}>
+            <i className="fas fa-exclamation-triangle"></i>
+            <p>{message}</p>
+        </div>
+    </div>
+);
+
+export default function SignUp({ setUser }) { // Принимаем функцию setUser как пропс
+    const navigate = useNavigate();
     const handleBackClick = () => {
         navigate(-1);
     };
 
-    // Обработчик изменения полей ввода
-    const handleInputChange = (e) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value
-        });
-    };
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
 
-    // Обработчик отправки формы регистрации
-    const handleFormSubmit = async (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
+        setLoading(true);
+        setError(null);
+        
         try {
             const response = await axios.post(`${process.env.REACT_APP_API_URL}/auth/local/register`, {
-                username: formData.name,
-                email: formData.email,
-                password: formData.password
+                username: name,
+                email: email,
+                password: password,
             });
+    
+            setUser({ name: name, email: email });
+    
+            // Сохранение пользователя в localStorage
+            localStorage.setItem('user', JSON.stringify({ name: name, email: email }));
+    
             console.log('Registration successful', response.data);
-
-            // После успешной регистрации можно перенаправить пользователя, например, на страницу входа
-            navigate('/');
+            navigate('/profile');
         } catch (err) {
-            console.error('Registration failed:', err.response?.data || err.message);
-            setError(err.response?.data?.error?.message || 'Registration failed');
+            setError('Registration failed. Please try again.');
+            console.error('Error during registration', err);
+        } finally {
+            setLoading(false);
+        }
+    };
+    
+    
+    
+
+    const handleErrorClick = () => {
+        if (error) {
+            setError(null);
         }
     };
 
     return (
-        <div className="Signin">
+        <div className="Signup" onClick={handleErrorClick}>
+            {loading && <LoadingOverlay />}
+            {error && <ErrorOverlay message={error} onClose={() => setError(null)} />}
+
             <header className="headerup">
                 <div className="up_container_arrow">
                     <div className="imgup_arrow" onClick={handleBackClick}>
-                        <img className="arrow" src={arrow} alt="Back" />
+                        <img className="arrow" src={arrow} alt="" />
                     </div>
                 </div>
             </header>
@@ -63,7 +91,7 @@ export default function SignUp() {
                 </div>
             </nav>
 
-            <form className="up-registr" onSubmit={handleFormSubmit}>
+            <form className="up-registr" onSubmit={handleSubmit}>
                 <div className="up-column">
                     <h1 className='up'>Name</h1>
                 </div>
@@ -72,9 +100,8 @@ export default function SignUp() {
                         type="text"
                         className="up_input up_ema"
                         placeholder="Enter your Name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                     />
                 </div>
 
@@ -83,12 +110,11 @@ export default function SignUp() {
                 </div>
                 <div className="inputForm">
                     <input
-                        type="email"
+                        type="text"
                         className="up_input up_ema"
                         placeholder="Enter your Email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                     />
                 </div>
 
@@ -100,25 +126,23 @@ export default function SignUp() {
                         type="password"
                         className="up_input up_pas"
                         placeholder="Enter your Password"
-                        name="password"
-                        value={formData.password}
-                        onChange={handleInputChange}
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
                     />
                 </div>
 
-                {error && <div className="error-message">{error}</div>}
-
                 <div className="up_btn">
-                    <button className="up_button_sign" type="submit">
-                        Sign Up
+                    <button className="up_button_sign" type="submit" disabled={loading}>
+                        {loading ? 'Registering...' : 'Sign Up'}
                     </button>
 
-                    <button className="up_button_google">
-                        <img src={gogle} alt="Google" />
+                    <button className="up_button_google" type="button">
+                        <img src={google} alt="" />
                         Sign in with Google
                     </button>
-
-                    <p className="up_have">Already have an account? <Link to="/signin" className="up_free">Sign In</Link></p>
+                    <p className="up_have">
+                        Don’t have an account? <Link to="/signin" className="up_free">Sign Up for Free</Link>
+                    </p>
                 </div>
             </form>
         </div>
