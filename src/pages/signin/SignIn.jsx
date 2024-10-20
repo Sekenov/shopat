@@ -4,6 +4,7 @@ import arrow from '../../img/fovorit/Arrow.png';
 import google from '../../img/signin/Group 108.svg';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { useDispatch } from 'react-redux';
 
 // Компонент для отображения индикатора загрузки
 const LoadingOverlay = () => (
@@ -31,28 +32,32 @@ export default function SignIn({ setUser }) {
     const [password, setPassword] = useState('');
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
+const dispatch = useDispatch();
 
     const handleBackClick = () => {
         navigate(-1);
     };
 
+    // В методе handleSignIn после успешного входа
     const handleSignIn = async (e) => {
         e.preventDefault();
         setLoading(true);
         setError(null);
-    
+
         try {
             const response = await axios.post(`${process.env.REACT_APP_API_URL}/auth/local`, {
                 identifier: email,
                 password: password,
             });
-    
+
             const userData = response.data.user;
-            setUser({ name: userData.username, email: userData.email });
-    
+
+            // Диспатчим LOGIN действие с id, name и email
+            dispatch({ type: 'LOGIN', payload: { id: userData.id, name: userData.username, email: userData.email } });
+
             // Сохранение пользователя в localStorage
-            localStorage.setItem('user', JSON.stringify({ name: userData.username, email: userData.email }));
-    
+            localStorage.setItem('user', JSON.stringify({ name: userData.username, email: userData.email, id: userData.id }));
+
             console.log('Login successful', response.data);
             navigate('/profile');
         } catch (err) {
@@ -62,6 +67,9 @@ export default function SignIn({ setUser }) {
             setLoading(false);
         }
     };
+    
+
+    
     
     
 

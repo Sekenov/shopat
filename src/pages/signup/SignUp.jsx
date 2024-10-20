@@ -1,9 +1,12 @@
+// SignUp.jsx
 import React, { useState } from 'react';
 import './SignUp.css';
 import arrow from '../../img/fovorit/Arrow.png';
 import google from '../../img/signin/Group 108.svg';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { useDispatch, useSelector } from 'react-redux'; // Импортируем useDispatch и useSelector
+import { registerStart, registerSuccess, registerFail } from '../../store/userSlice'; // Импортируем экшены
 
 const LoadingOverlay = () => (
     <div className="overlay">
@@ -23,22 +26,18 @@ const ErrorOverlay = ({ message, onClose }) => (
     </div>
 );
 
-export default function SignUp({ setUser }) { // Принимаем функцию setUser как пропс
+export default function SignUp({ setUser }) {
+    const dispatch = useDispatch();
+    const { loading, error } = useSelector((state) => state.user); // Получаем состояние из Redux
     const navigate = useNavigate();
-    const handleBackClick = () => {
-        navigate(-1);
-    };
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(null);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setLoading(true);
-        setError(null);
+        dispatch(registerStart());
         
         try {
             const response = await axios.post(`${process.env.REACT_APP_API_URL}/auth/local/register`, {
@@ -46,39 +45,38 @@ export default function SignUp({ setUser }) { // Принимаем функци
                 email: email,
                 password: password,
             });
-    
-            setUser({ name: name, email: email });
-    
-            // Сохранение пользователя в localStorage
-            localStorage.setItem('user', JSON.stringify({ name: name, email: email }));
-    
-            console.log('Registration successful', response.data);
+
+            const userData = { name: name, email: email };
+            dispatch(registerSuccess(userData)); // Обновляем состояние пользователя
+            localStorage.setItem('user', JSON.stringify(userData));
             navigate('/profile');
         } catch (err) {
-            setError('Registration failed. Please try again.');
-            console.error('Error during registration', err);
-        } finally {
-            setLoading(false);
+            dispatch(registerFail('Registration failed. Please try again.'));
         }
     };
-    
-    
-    
 
-    const handleErrorClick = () => {
-        if (error) {
-            setError(null);
-        }
-    };
+    const renderLoading = () => (
+        <div className="loading-square center-content">
+            <i className="fas fa-spinner"></i>
+            <p>Loading...</p>
+        </div>
+    );
+
+    const renderError = () => (
+        <div className="error-square center-content">
+            <i className="fas fa-exclamation-triangle"></i>
+            <p>{error || 'An error occurred during registration.'}</p>
+        </div>
+    );
 
     return (
-        <div className="Signup" onClick={handleErrorClick}>
-            {loading && <LoadingOverlay />}
-            {error && <ErrorOverlay message={error} onClose={() => setError(null)} />}
+        <div className="Signup">
+            {loading && renderLoading()} {/* Используем локальную функцию для отображения загрузки */}
+            {error && renderError()} {/* Используем локальную функцию для отображения ошибок */}
 
             <header className="headerup">
                 <div className="up_container_arrow">
-                    <div className="imgup_arrow" onClick={handleBackClick}>
+                    <div className="imgup_arrow" onClick={() => navigate(-1)}>
                         <img className="arrow" src={arrow} alt="" />
                     </div>
                 </div>
