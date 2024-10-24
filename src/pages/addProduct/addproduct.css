@@ -32,6 +32,7 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+    margin-bottom: 50px;
   }
   .blockAllProduct .AddProduct-inputBlock .titleName{
     display: flex;
@@ -153,7 +154,9 @@
 
 
 
-
+  .blockAllProduct .AddProduct-inputBlock  .checkout-button {
+    max-width: 375px;
+  }
 .blockAllProduct .AddProduct-inputBlock  .checkout-button .button-submit{
     
     padding: 16px 126px;
@@ -161,4 +164,37 @@
     border: none;
     background-color: #5B9EE1;
     color: white;
+    
+    width: 100%;
+    
+    
 }  
+.uploaded-photos {
+  display: flex;
+  flex-wrap: wrap; /* Позволяет изображениям обтекать */
+  justify-content: space-around;
+  gap: 15px ; /* Отступ между изображениями */
+  margin-top: 10px; /* Отступ сверху от предыдущих элементов */
+}
+
+.uploaded-image {
+  width: 100px; /* Ширина изображения */
+  height: 100px; /* Высота изображения */
+  object-fit: cover; /* Обеспечивает сохранение пропорций изображения */
+  border-radius: 8px; /* Закругление углов изображений */
+  background-color: #f0f0f0; /* Фоновый цвет для загрузки */
+}
+.uploaded-image-container {
+  position: relative;
+  display: inline-block;
+  margin: 10px; /* Добавьте отступ между изображениями */
+}
+
+.delete-icon {
+  position: absolute;
+  top: 5px; /* Расположение по вертикали */
+  right: 5px; /* Расположение по горизонтали */
+  cursor: pointer;
+  color: rgb(0, 0, 0); /* Цвет иконки */
+  font-size: 16px; /* Размер иконки */
+}
